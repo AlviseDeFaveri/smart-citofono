@@ -16,10 +16,9 @@
 
 #define MAX_TCP_SEGMENT_SIZE    32
 
-#define RETRY_FOREVER              0xFF
 #define RECONNECT_INTERVAL         (CLOCK_SECOND * 2)
-#define RECONNECT_ATTEMPTS         RETRY_FOREVER
-#define NET_CONNECT_PERIODIC        (CLOCK_SECOND >> 2)
+#define RECONNECT_ATTEMPTS          RETRY_FOREVER
+#define NET_CONNECT_PERIODIC       (CLOCK_SECOND >> 2)
 #define STATE_MACHINE_PERIODIC     (CLOCK_SECOND >> 1)
 
 /*-----------------------CONFIGURATION---------------------------------------*/
@@ -33,17 +32,44 @@ static const int rt_ping_interval = (CLOCK_SECOND * 30);
 
 static struct etimer fsm_periodic_timer;
 static uint16_t seq_nr_value = 0;
-static struct etimer echo_request_timer;
 
 static struct mqtt_connection conn;
 static uint8_t state;
 static struct mqtt_message *msg_ptr = 0;
-static uint8_t connect_attempt;
+static uint8_t connect_attempt = 0;
+#define APP_BUFFER_SIZE 512
+static char app_buffer[APP_BUFFER_SIZE];
+
+char* org_id  =  "smart-citofono";
+char client_id[APP_BUFFER_SIZE];
 
 /*-----------------------PROCESS INIT----------------------------------------*/
 PROCESS(mqtt_fsm_process, "MQTT Smart Citofono");
 PROCESS_NAME(mqtt_fsm_process);
 AUTOSTART_PROCESSES(&mqtt_fsm_process);
+
+/*-----------------------PUBLISH FUNC----------------------------------------*/
+/**
+ * What to do when publishing.
+ */
+void publish()
+{
+  seq_nr_value++;
+  snprintf(app_buffer, APP_BUFFER_SIZE,
+           "{"
+           "\"d\":{"
+           "\"id\":\"%s\","
+           "\"seq\":\"%d\","
+           "\"uptime\":%lu}}",
+           client_id,
+           seq_nr_value,
+           clock_seconds());
+
+  mqtt_publish(&conn, NULL, pub_topic, (uint8_t *)app_buffer,
+               strlen(app_buffer), MQTT_QOS_LEVEL_1, MQTT_RETAIN_OFF);
+
+  DBG("APP - Publish!\n");
+}
 
 
 /*--------------------------EVENT HANDLER------------------------------------*/
@@ -90,9 +116,9 @@ mqtt_event_handler(struct mqtt_connection *m, mqtt_event_t event, void *data)
 
   case MQTT_EVENT_SUBACK:
   {
-    DBG("APP - Application is subscribed to topic successfully\n");
     if(state == STATE_CONNECTED)
     {
+      DBG("APP - Application is subscribed to topic successfully\n");
       state = STATE_IDLE;
     }
     break;
@@ -141,7 +167,7 @@ static void state_machine(void)
 
     if(status == MQTT_STATUS_OK)
     {
-       mqtt_set_username_password(&conn, "use-token-auth", auth_token);
+      //mqtt_set_username_password(&conn, "use-token-auth", auth_token);
       //mqtt_set_last_will()...
       connect_attempt = 1;
       state = STATE_CONNECTING;
@@ -189,13 +215,14 @@ static void state_machine(void)
     connect_attempt = 1;
 
     mqtt_status_t status = mqtt_subscribe(&conn, NULL, sub_topic,
-                                            MQTT_QOS_LEVEL_0);
+                                            MQTT_QOS_LEVEL_1);
 
     DBG("APP - Subscribing!\n");
     if(status != MQTT_STATUS_OK)
     {
       state = STATE_ERROR;
     }
+    etimer_set(&fsm_periodic_timer, NET_CONNECT_PERIODIC);
     return;
     break;
   }
@@ -206,6 +233,7 @@ static void state_machine(void)
    */
   case STATE_IDLE:
   {
+    printf("STATE IDLE\n");
     return;
     break;
   }
@@ -227,7 +255,6 @@ static void state_machine(void)
       etimer_set(&fsm_periodic_timer, pub_interval);
 
       DBG("Publishing\n");
-      /* Return here so we don't end up rescheduling the timer */
       return;
     }
     else
@@ -246,8 +273,7 @@ static void state_machine(void)
   {
     printf("STATE DISCONNECTED\n");
 
-    if(connect_attempt < RECONNECT_ATTEMPTS ||
-       RECONNECT_ATTEMPTS == RETRY_FOREVER) {
+    if(connect_attempt < RECONNECT_ATTEMPTS) {
       /* Disconnect and backoff */
       clock_time_t interval;
       mqtt_disconnect(&conn);
@@ -291,18 +317,22 @@ PROCESS_THREAD(mqtt_fsm_process, ev, data)
   PROCESS_BEGIN();
   printf("Smart citofono started\n");
 
+  /* Init client id */
+  snprintf(client_id, APP_BUFFER_SIZE, "d:%s:%s:%02x%02x%02x%02x%02x%02x",
+           org_id, type_id,
+           linkaddr_node_addr.u8[0], linkaddr_node_addr.u8[1],
+           linkaddr_node_addr.u8[2], linkaddr_node_addr.u8[5],
+           linkaddr_node_addr.u8[6], linkaddr_node_addr.u8[7]);
+
   /* Init fsm  */
   seq_nr_value = 0;
   state = STATE_INIT;
   etimer_set(&fsm_periodic_timer, 0); // schedule first state machine event
 
-  /* Start timers */
-  // etimer_set(&echo_request_timer, conf.def_rt_ping_interval);
-
   /* Main loop */
   while(1) {
 
-    PROCESS_YIELD();
+    PROCESS_WAIT_EVENT();
 
     /* If it's an internal event, advance the mqtt state machine */
     if((ev == PROCESS_EVENT_TIMER && data == &fsm_periodic_timer) ||
@@ -327,13 +357,6 @@ PROCESS_THREAD(mqtt_fsm_process, ev, data)
       {
         state = STATE_ERROR;
       }
-    }
-
-
-    /* handle the echo timer */
-    if(ev == PROCESS_EVENT_TIMER && data == &echo_request_timer) {
-      //ping_parent();
-      //etimer_set(&echo_request_timer, conf.def_rt_ping_interval);
     }
   }
 
