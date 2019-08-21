@@ -288,9 +288,7 @@ static void state_machine(void)
 /*-------------------------MAIN PROCESS--------------------------------------*/
 PROCESS_THREAD(mqtt_fsm_process, ev, data)
 {
-
   PROCESS_BEGIN();
-
   printf("Smart citofono started\n");
 
   /* Init fsm  */
