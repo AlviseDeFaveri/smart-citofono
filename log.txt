@@ -1,0 +1,267 @@
+00:00.236   ID:2    APP [citofono] - Smart-citofono interphone started
+00:00.236   ID:2    APP [citofono] - STATE INIT
+00:00.236   ID:2    APP [citofono] - STATE DISCONNECTED, Connect attempt 0
+00:00.348   ID:4    APP [mote] - Smart-citofono mote started
+00:00.348   ID:4    APP [mote] - STATE INIT
+00:00.348   ID:4    APP [mote] - STATE DISCONNECTED, Connect attempt 0
+00:00.899   ID:3    APP [mote] - Smart-citofono mote started
+00:00.899   ID:3    APP [mote] - STATE INIT
+00:00.899   ID:3    APP [mote] - STATE DISCONNECTED, Connect attempt 0
+00:02.236   ID:2    APP [citofono] - STATE DISCONNECTED, Connect attempt 1
+00:02.348   ID:4    APP [mote] - STATE DISCONNECTED, Connect attempt 1
+00:02.899   ID:3    APP [mote] - STATE DISCONNECTED, Connect attempt 1
+00:06.348   ID:4    APP [mote] - STATE DISCONNECTED, Connect attempt 2
+00:06.899   ID:3    APP [mote] - STATE DISCONNECTED, Connect attempt 2
+00:14.348   ID:4    APP [mote] - STATE DISCONNECTED, Connect attempt 3
+00:14.899   ID:3    APP [mote] - STATE DISCONNECTED, Connect attempt 3
+00:25.747   ID:2    APP [citofono] - STATE DISCONNECTED, Connect attempt 2
+00:25.871   ID:4    APP [mote] - STATE DISCONNECTED, Connect attempt 4
+00:25.911   ID:2    APP [citofono] - STATE CONNECTED
+00:26.162   ID:4    APP [mote] - STATE CONNECTED
+00:26.411   ID:3    APP [mote] - STATE DISCONNECTED, Connect attempt 4
+00:26.597   ID:3    APP [mote] - STATE CONNECTED
+00:43.406   ID:2    APP [citofono] - Interphone ringing
+00:43.567   ID:4    APP [mote] - Ringing
+00:43.567   ID:4    APP [mote] - RINGING state
+00:43.567   ID:4    APP [mote] - Ringing
+00:43.567   ID:4    APP [mote] - RINGING state
+00:43.587   ID:3    APP [mote] - Ringing
+00:43.587   ID:3    APP [mote] - RINGING state
+00:43.587   ID:3    APP [mote] - Ringing
+00:43.587   ID:3    APP [mote] - RINGING state
+00:45.406   ID:2    APP [citofono] - Interphone ringing
+00:45.420   ID:4    APP [mote] - Ringing
+00:45.420   ID:4    APP [mote] - RINGING state
+00:45.420   ID:4    APP [mote] - Ringing
+00:45.420   ID:4    APP [mote] - RINGING state
+00:45.473   ID:3    APP [mote] - Ringing
+00:45.473   ID:3    APP [mote] - RINGING state
+00:45.473   ID:3    APP [mote] - Ringing
+00:45.473   ID:3    APP [mote] - RINGING state
+00:45.675   ID:4    APP [mote] - Ringing
+00:45.675   ID:4    APP [mote] - RINGING state
+00:45.675   ID:4    APP [mote] - Ringing
+00:45.675   ID:4    APP [mote] - RINGING state
+00:45.695   ID:3    APP [mote] - Ringing
+00:45.695   ID:3    APP [mote] - RINGING state
+00:45.695   ID:3    APP [mote] - Ringing
+00:45.695   ID:3    APP [mote] - RINGING state
+00:47.406   ID:2    APP [citofono] - Interphone ringing
+00:47.597   ID:4    APP [mote] - Ringing
+00:47.597   ID:4    APP [mote] - RINGING state
+00:47.597   ID:4    APP [mote] - Ringing
+00:47.597   ID:4    APP [mote] - RINGING state
+00:47.625   ID:3    APP [mote] - Ringing
+00:47.625   ID:3    APP [mote] - RINGING state
+00:47.625   ID:3    APP [mote] - Ringing
+00:47.625   ID:3    APP [mote] - RINGING state
+00:49.406   ID:2    APP [citofono] - Interphone ringing
+00:49.572   ID:4    APP [mote] - Ringing
+00:49.572   ID:4    APP [mote] - RINGING state
+00:49.572   ID:4    APP [mote] - Ringing
+00:49.572   ID:4    APP [mote] - RINGING state
+00:49.594   ID:3    APP [mote] - Ringing
+00:49.594   ID:3    APP [mote] - RINGING state
+00:49.594   ID:3    APP [mote] - Ringing
+00:49.594   ID:3    APP [mote] - RINGING state
+00:50.415   ID:4    APP [mote] - Ringing
+00:50.415   ID:4    APP [mote] - RINGING state
+00:50.415   ID:4    APP [mote] - Ringing
+00:50.415   ID:4    APP [mote] - RINGING state
+00:50.438   ID:3    APP [mote] - Ringing
+00:50.438   ID:3    APP [mote] - RINGING state
+00:50.438   ID:3    APP [mote] - Ringing
+00:50.438   ID:3    APP [mote] - RINGING state
+00:51.149   ID:4    APP [mote] - Ringing
+00:51.149   ID:4    APP [mote] - RINGING state
+00:51.149   ID:4    APP [mote] - Sending OPEN message
+00:51.302   ID:2    APP [citofono] - Open message received
+00:51.302   ID:2    APP [citofono] - Opening gate
+00:53.302   ID:2    APP [citofono] - Gate opened
+01:01.757   ID:2    APP [citofono] - Interphone ringing
+01:01.928   ID:4    APP [mote] - Ringing
+01:01.928   ID:4    APP [mote] - RINGING state
+01:01.928   ID:4    APP [mote] - Ringing
+01:01.928   ID:4    APP [mote] - RINGING state
+01:01.959   ID:3    APP [mote] - Ringing
+01:01.959   ID:3    APP [mote] - RINGING state
+01:01.959   ID:3    APP [mote] - Ringing
+01:01.959   ID:3    APP [mote] - RINGING state
+01:03.757   ID:2    APP [citofono] - Interphone ringing
+01:03.933   ID:4    APP [mote] - Ringing
+01:03.933   ID:4    APP [mote] - RINGING state
+01:03.933   ID:4    APP [mote] - Ringing
+01:03.933   ID:4    APP [mote] - RINGING state
+01:03.954   ID:3    APP [mote] - Ringing
+01:03.954   ID:3    APP [mote] - RINGING state
+01:03.954   ID:3    APP [mote] - Ringing
+01:03.954   ID:3    APP [mote] - RINGING state
+01:05.404   ID:4    APP [mote] - Ringing
+01:05.404   ID:4    APP [mote] - RINGING state
+01:05.404   ID:4    APP [mote] - Ringing
+01:05.404   ID:4    APP [mote] - RINGING state
+01:05.426   ID:3    APP [mote] - Ringing
+01:05.426   ID:3    APP [mote] - RINGING state
+01:05.426   ID:3    APP [mote] - Ringing
+01:05.426   ID:3    APP [mote] - RINGING state
+01:05.757   ID:2    APP [citofono] - Interphone ringing
+01:05.925   ID:4    APP [mote] - Ringing
+01:05.925   ID:4    APP [mote] - RINGING state
+01:05.925   ID:4    APP [mote] - Ringing
+01:05.925   ID:4    APP [mote] - RINGING state
+01:05.945   ID:3    APP [mote] - Ringing
+01:05.945   ID:3    APP [mote] - RINGING state
+01:05.945   ID:3    APP [mote] - Ringing
+01:05.945   ID:3    APP [mote] - RINGING state
+01:07.757   ID:2    APP [citofono] - Interphone ringing
+01:07.932   ID:4    APP [mote] - Ringing
+01:07.932   ID:4    APP [mote] - RINGING state
+01:07.932   ID:4    APP [mote] - Ringing
+01:07.932   ID:4    APP [mote] - RINGING state
+01:07.958   ID:3    APP [mote] - Ringing
+01:07.958   ID:3    APP [mote] - RINGING state
+01:07.958   ID:3    APP [mote] - Ringing
+01:07.958   ID:3    APP [mote] - RINGING state
+01:09.757   ID:2    APP [citofono] - Interphone ringing
+01:09.928   ID:4    APP [mote] - Ringing
+01:09.928   ID:4    APP [mote] - RINGING state
+01:09.928   ID:4    APP [mote] - Ringing
+01:09.928   ID:4    APP [mote] - RINGING state
+01:09.953   ID:3    APP [mote] - Ringing
+01:09.953   ID:3    APP [mote] - RINGING state
+01:09.953   ID:3    APP [mote] - Ringing
+01:09.953   ID:3    APP [mote] - RINGING state
+01:10.405   ID:4    APP [mote] - Ringing
+01:10.405   ID:4    APP [mote] - RINGING state
+01:10.405   ID:4    APP [mote] - Ringing
+01:10.405   ID:4    APP [mote] - RINGING state
+01:10.435   ID:3    APP [mote] - Ringing
+01:10.435   ID:3    APP [mote] - RINGING state
+01:10.435   ID:3    APP [mote] - Ringing
+01:10.435   ID:3    APP [mote] - RINGING state
+01:11.757   ID:2    APP [citofono] - Interphone ringing
+01:11.924   ID:4    APP [mote] - Ringing
+01:11.924   ID:4    APP [mote] - RINGING state
+01:11.924   ID:4    APP [mote] - Ringing
+01:11.924   ID:4    APP [mote] - RINGING state
+01:11.945   ID:3    APP [mote] - Ringing
+01:11.945   ID:3    APP [mote] - RINGING state
+01:11.945   ID:3    APP [mote] - Ringing
+01:11.945   ID:3    APP [mote] - RINGING state
+01:13.757   ID:2    APP [citofono] - Interphone ringing
+01:13.932   ID:4    APP [mote] - Ringing
+01:13.932   ID:4    APP [mote] - RINGING state
+01:13.932   ID:4    APP [mote] - Ringing
+01:13.932   ID:4    APP [mote] - RINGING state
+01:13.953   ID:3    APP [mote] - Ringing
+01:13.953   ID:3    APP [mote] - RINGING state
+01:13.953   ID:3    APP [mote] - Ringing
+01:13.953   ID:3    APP [mote] - RINGING state
+01:15.402   ID:4    APP [mote] - Ringing
+01:15.402   ID:4    APP [mote] - RINGING state
+01:15.402   ID:4    APP [mote] - Ringing
+01:15.402   ID:4    APP [mote] - RINGING state
+01:15.422   ID:3    APP [mote] - Ringing
+01:15.422   ID:3    APP [mote] - RINGING state
+01:15.422   ID:3    APP [mote] - Ringing
+01:15.422   ID:3    APP [mote] - RINGING state
+01:15.757   ID:2    APP [citofono] - Interphone ringing
+01:15.919   ID:4    APP [mote] - Ringing
+01:15.919   ID:4    APP [mote] - RINGING state
+01:15.919   ID:4    APP [mote] - Ringing
+01:15.919   ID:4    APP [mote] - RINGING state
+01:15.940   ID:3    APP [mote] - Ringing
+01:15.940   ID:3    APP [mote] - RINGING state
+01:15.940   ID:3    APP [mote] - Ringing
+01:15.940   ID:3    APP [mote] - RINGING state
+01:17.757   ID:2    APP [citofono] - Interphone ringing
+01:17.925   ID:4    APP [mote] - Ringing
+01:17.925   ID:4    APP [mote] - RINGING state
+01:17.925   ID:4    APP [mote] - Ringing
+01:17.925   ID:4    APP [mote] - RINGING state
+01:17.947   ID:3    APP [mote] - Ringing
+01:17.947   ID:3    APP [mote] - RINGING state
+01:17.947   ID:3    APP [mote] - Ringing
+01:17.947   ID:3    APP [mote] - RINGING state
+01:19.757   ID:2    APP [citofono] - Interphone ringing
+01:19.928   ID:4    APP [mote] - Ringing
+01:19.928   ID:4    APP [mote] - RINGING state
+01:19.928   ID:4    APP [mote] - Ringing
+01:19.928   ID:4    APP [mote] - RINGING state
+01:19.949   ID:3    APP [mote] - Ringing
+01:19.949   ID:3    APP [mote] - RINGING state
+01:19.949   ID:3    APP [mote] - Ringing
+01:19.949   ID:3    APP [mote] - RINGING state
+01:20.401   ID:4    APP [mote] - Ringing
+01:20.401   ID:4    APP [mote] - RINGING state
+01:20.401   ID:4    APP [mote] - Ringing
+01:20.401   ID:4    APP [mote] - RINGING state
+01:20.421   ID:3    APP [mote] - Ringing
+01:20.421   ID:3    APP [mote] - RINGING state
+01:20.421   ID:3    APP [mote] - Ringing
+01:20.421   ID:3    APP [mote] - RINGING state
+01:21.757   ID:2    APP [citofono] - Interphone ringing
+01:21.924   ID:4    APP [mote] - Ringing
+01:21.924   ID:4    APP [mote] - RINGING state
+01:21.924   ID:4    APP [mote] - Ringing
+01:21.924   ID:4    APP [mote] - RINGING state
+01:21.945   ID:3    APP [mote] - Ringing
+01:21.945   ID:3    APP [mote] - RINGING state
+01:21.945   ID:3    APP [mote] - Ringing
+01:21.945   ID:3    APP [mote] - RINGING state
+01:23.757   ID:2    APP [citofono] - Interphone ringing
+01:23.920   ID:4    APP [mote] - Ringing
+01:23.920   ID:4    APP [mote] - RINGING state
+01:23.920   ID:4    APP [mote] - Ringing
+01:23.920   ID:4    APP [mote] - RINGING state
+01:23.941   ID:3    APP [mote] - Ringing
+01:23.941   ID:3    APP [mote] - RINGING state
+01:23.941   ID:3    APP [mote] - Ringing
+01:23.941   ID:3    APP [mote] - RINGING state
+01:25.407   ID:4    APP [mote] - Ringing
+01:25.407   ID:4    APP [mote] - RINGING state
+01:25.407   ID:4    APP [mote] - Ringing
+01:25.407   ID:4    APP [mote] - RINGING state
+01:25.427   ID:3    APP [mote] - Ringing
+01:25.427   ID:3    APP [mote] - RINGING state
+01:25.427   ID:3    APP [mote] - Ringing
+01:25.427   ID:3    APP [mote] - RINGING state
+01:25.757   ID:2    APP [citofono] - Interphone ringing
+01:25.935   ID:4    APP [mote] - Ringing
+01:25.935   ID:4    APP [mote] - RINGING state
+01:25.935   ID:4    APP [mote] - Ringing
+01:25.935   ID:4    APP [mote] - RINGING state
+01:25.958   ID:3    APP [mote] - Ringing
+01:25.958   ID:3    APP [mote] - RINGING state
+01:25.958   ID:3    APP [mote] - Ringing
+01:25.958   ID:3    APP [mote] - RINGING state
+01:27.757   ID:2    APP [citofono] - Interphone ringing
+01:27.937   ID:4    APP [mote] - Ringing
+01:27.937   ID:4    APP [mote] - RINGING state
+01:27.937   ID:4    APP [mote] - Ringing
+01:27.937   ID:4    APP [mote] - RINGING state
+01:27.961   ID:3    APP [mote] - Ringing
+01:27.961   ID:3    APP [mote] - RINGING state
+01:27.961   ID:3    APP [mote] - Ringing
+01:27.961   ID:3    APP [mote] - RINGING state
+01:29.757   ID:2    APP [citofono] - Interphone ringing
+01:29.938   ID:4    APP [mote] - Ringing
+01:29.938   ID:4    APP [mote] - RINGING state
+01:29.938   ID:4    APP [mote] - Ringing
+01:29.938   ID:4    APP [mote] - RINGING state
+01:29.958   ID:3    APP [mote] - Ringing
+01:29.958   ID:3    APP [mote] - RINGING state
+01:29.958   ID:3    APP [mote] - Ringing
+01:29.958   ID:3    APP [mote] - RINGING state
+01:30.416   ID:4    APP [mote] - Ringing
+01:30.416   ID:4    APP [mote] - RINGING state
+01:30.416   ID:4    APP [mote] - Ringing
+01:30.416   ID:4    APP [mote] - RINGING state
+01:30.436   ID:3    APP [mote] - Ringing
+01:30.436   ID:3    APP [mote] - RINGING state
+01:30.436   ID:3    APP [mote] - Ringing
+01:30.436   ID:3    APP [mote] - RINGING state
+01:31.757   ID:2    APP [citofono] - Interphone ringing
+01:31.757   ID:2    APP [citofono] - Timer expired, gate not opened
+01:39.431   ID:4    APP [mote] - Button pressed but no incoming call
+01:43.288   ID:3    APP [mote] - Button pressed but no incoming call

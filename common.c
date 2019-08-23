@@ -1,81 +1,114 @@
 /**
  * Smart citofono for IoT project.
+ * Author: Alvise de'Faveri Tron
+ *
+ * This file contains the the mqtt state machine which handles
+ * the registration, connection and disconnection phases of the MQTT communication.
+ * It is used by both the mote and the interphone node.
  */
+#include "common.h"
+
 #include "contiki-conf.h"
 #include "mqtt.h"
 #include "sys/etimer.h"
 #include "sys/ctimer.h"
 
-#define STATE_INIT            0
-#define STATE_CONNECTING      1
-#define STATE_CONNECTED       2
-#define STATE_IDLE            3
-#define STATE_PUBLISHING      4
-#define STATE_DISCONNECTED 0xFE
-#define STATE_ERROR        0xFF
+#define MAX_TCP_SEGMENT_SIZE        32
+#define MAX_PAYLOAD_SIZE            50
+#define APP_BUFFER_SIZE             512
 
-#define MAX_TCP_SEGMENT_SIZE    32
+#define SUBSCRIBE_INTERVAL          (CLOCK_SECOND * 10)
+#define PUB_INTERVAL                (CLOCK_SECOND * 10)
+#define RECONNECT_INTERVAL          (CLOCK_SECOND * 2)
 
-#define RECONNECT_INTERVAL         (CLOCK_SECOND * 2)
-#define RECONNECT_ATTEMPTS          RETRY_FOREVER
-#define NET_CONNECT_PERIODIC       (CLOCK_SECOND >> 2)
-#define STATE_MACHINE_PERIODIC     (CLOCK_SECOND >> 1)
+/*--------------------------VARIABLES----------------------------------------*/
+/* Configuration */
+static char *broker_ip;
+static uint16_t broker_port;
+static char* type_id;
+static char* pub_topic;
+static char* sub_topic;
+static struct process* mqtt_fsm_process;
+static IdleHandler idle_state_handler;
+static PubHandler  pub_handler;
 
-/*-----------------------CONFIGURATION---------------------------------------*/
-/* Specific implementation may vary between different motes. */
-#include "mote-impl.h"
-
-/*----------------------GLOBAL VARIABLES---------------------------------------*/
-static const clock_time_t pub_interval =  (30 * CLOCK_SECOND);
-static const unsigned int keep_alive_timer =   60;
-static const int rt_ping_interval = (CLOCK_SECOND * 30);
-
+/* Global variables */
 static struct etimer fsm_periodic_timer;
-static uint16_t seq_nr_value = 0;
 
+static char send_buffer[APP_BUFFER_SIZE];
+static struct mqtt_message *rcv_buffer;
+static char* org_id  =  "smartcit";
+static char client_id[APP_BUFFER_SIZE];
+
+static uint16_t seq_nr_value = 0;
+static uint8_t connect_attempt = 0;
 static struct mqtt_connection conn;
 static uint8_t state;
-static struct mqtt_message *msg_ptr = 0;
-static uint8_t connect_attempt = 0;
-#define APP_BUFFER_SIZE 512
-static char app_buffer[APP_BUFFER_SIZE];
 
-char* org_id  =  "smart-citofono";
-char client_id[APP_BUFFER_SIZE];
 
-/*-----------------------PROCESS INIT----------------------------------------*/
-PROCESS(mqtt_fsm_process, "MQTT Smart Citofono");
-PROCESS_NAME(mqtt_fsm_process);
-AUTOSTART_PROCESSES(&mqtt_fsm_process);
+/*-------------------------INIT FUNC----------------------------------------*/
+/**
+ * Initialization of the mqtt state-machine.
+ */
+void mqtt_fsm_init( char* b_ip,
+                    uint16_t b_port,
+                    char* t_id,
+                    char* pub_t,
+                    char* sub_t,
+                    struct process* p,
+                    IdleHandler idle_h,
+                    PubHandler  pub_h )
+{
+  /* Set configuration */
+  broker_ip   = b_ip;
+  broker_port = b_port;
+  type_id     = t_id;
+  pub_topic   = pub_t;
+  sub_topic   = sub_t;
+  mqtt_fsm_process = p;
+  idle_state_handler = idle_h;
+  pub_handler  = pub_h;
+
+  /* Init client id */
+  snprintf(client_id, APP_BUFFER_SIZE, "d:%s:%s:%02x%02x",
+           org_id, type_id,
+           linkaddr_node_addr.u8[6], linkaddr_node_addr.u8[7]);
+
+  /* Init fsm  */
+  seq_nr_value = 0;
+  state = STATE_INIT;
+  etimer_set(&fsm_periodic_timer, 0); // schedule first state machine event
+}
+
 
 /*-----------------------PUBLISH FUNC----------------------------------------*/
 /**
- * What to do when publishing.
+ * Set the message to be published.
  */
-void publish()
+void mqtt_fsm_publish(char payload)
 {
   seq_nr_value++;
-  snprintf(app_buffer, APP_BUFFER_SIZE,
+  snprintf(send_buffer, APP_BUFFER_SIZE,
            "{"
            "\"d\":{"
-           "\"id\":\"%s\","
+           "\"id\":%c,"
            "\"seq\":\"%d\","
+           "\"source\":\"%s\","
            "\"uptime\":%lu}}",
-           client_id,
+           payload,
            seq_nr_value,
+           client_id,
            clock_seconds());
+  state = STATE_PUBLISHING;
 
-  mqtt_publish(&conn, NULL, pub_topic, (uint8_t *)app_buffer,
-               strlen(app_buffer), MQTT_QOS_LEVEL_1, MQTT_RETAIN_OFF);
-
-  DBG("APP - Publish!\n");
+  /* Wake up the state machine thread */
+  process_poll(mqtt_fsm_process);
 }
 
 
 /*--------------------------EVENT HANDLER------------------------------------*/
 /**
- * This function handles the arrival of MQTT messages from the MQTT driver
- *
+ * This function handles the arrival of MQTT messages from the MQTT driver.
  */
 static void
 mqtt_event_handler(struct mqtt_connection *m, mqtt_event_t event, void *data)
@@ -91,26 +124,16 @@ mqtt_event_handler(struct mqtt_connection *m, mqtt_event_t event, void *data)
   case MQTT_EVENT_DISCONNECTED:
   {
     DBG("APP - MQTT Disconnect. Reason %u\n", *((mqtt_event_t *)data));
-
     state = STATE_DISCONNECTED;
-    process_poll(&mqtt_fsm_process);
     break;
   }
 
   case MQTT_EVENT_PUBLISH:
   {
-    msg_ptr = data;
-
-    /* Implement first_flag in publish message? */
-    if(msg_ptr->first_chunk) {
-      msg_ptr->first_chunk = 0;
-      DBG("APP - Application received a publish on topic '%s'. Payload "
-          "size is %i bytes. Content:\n\n",
-          msg_ptr->topic, msg_ptr->payload_length);
-    }
-
-    pub_handler(msg_ptr->topic, strlen(msg_ptr->topic), msg_ptr->payload_chunk,
-                msg_ptr->payload_length);
+    DBG("APP - Application received a msg from a subscription\n");
+    rcv_buffer = data;
+    (*pub_handler)(rcv_buffer->topic, strlen(rcv_buffer->topic), rcv_buffer->payload_chunk,
+                rcv_buffer->payload_length);
     break;
   }
 
@@ -144,6 +167,9 @@ mqtt_event_handler(struct mqtt_connection *m, mqtt_event_t event, void *data)
     DBG("APP - Application got a unhandled MQTT event: %i\n", event);
     break;
   }
+
+  /* Wake up the state machine thread */
+  process_poll(mqtt_fsm_process);
 }
 
 
@@ -151,214 +177,132 @@ mqtt_event_handler(struct mqtt_connection *m, mqtt_event_t event, void *data)
 /**
  * This function executes the action corresponding to the current state.
  */
-static void state_machine(void)
+void mqtt_fsm_run(process_event_t ev, process_data_t data)
 {
-  switch(state) {
-
-  /**
-   * INIT state: initialize the mqtt driver and set last will. This state
-   * performs a spontaneous transition to the CONNECTING state when it's finished.
-   */
-  case STATE_INIT:
+  /* If the mote is in IDLE state, execute the handler. */
+  if(state==STATE_IDLE)
   {
-    printf("STATE INIT\n");
-    mqtt_status_t status = mqtt_register(&conn, &mqtt_fsm_process, client_id,
-                                        mqtt_event_handler, MAX_TCP_SEGMENT_SIZE);
-
-    if(status == MQTT_STATUS_OK)
-    {
-      //mqtt_set_username_password(&conn, "use-token-auth", auth_token);
-      //mqtt_set_last_will()...
-      connect_attempt = 1;
-      state = STATE_CONNECTING;
-    }
-    else
-    {
-      state = STATE_ERROR;
-      return;
-    }
-
+    (*idle_state_handler)(ev, data);
   }
-  /* Continue (i.e. spontaneous transition to next state). */
 
-  /**
-   * CONNECTING state: try to connect to the broker. The mote
-   * can exit this state either by receiving a MQTT_EVENT_CONNECTED, handled
-   * in the mqtt_event_handler(), or because of a driver error.
-   */
-  case STATE_CONNECTING:
+  /* In other states, react only to fsm timer and polling */
+  else if((ev == PROCESS_EVENT_TIMER && data == &fsm_periodic_timer) ||
+          ev == PROCESS_EVENT_POLL)
   {
-    printf("STATE REGISTERED. Connect attempt %u\n", connect_attempt);
-
-    mqtt_status_t status = mqtt_connect(&conn, broker_ip, broker_port,
-                   pub_interval * 3);
-
-    if(status != MQTT_STATUS_OK)
-    {
-      state = STATE_ERROR;
-    }
-
-    etimer_set(&fsm_periodic_timer, NET_CONNECT_PERIODIC);
-    return;
-    break;
-  }
-
-  /**
-   * CONNECTED state: try to subscribe to the sub_topic. The subscription
-   * needs to be confirmed by the broker. The mote
-   * can exit this state either by receiving a MQTT_EVENT_SUBACK, handled
-   * in the mqtt_event_handler(), or because of a driver error.
-   */
-  case STATE_CONNECTED:
-  {
-    printf("STATE CONNECTED\n");
-    connect_attempt = 1;
-
-    mqtt_status_t status = mqtt_subscribe(&conn, NULL, sub_topic,
-                                            MQTT_QOS_LEVEL_1);
-
-    DBG("APP - Subscribing!\n");
-    if(status != MQTT_STATUS_OK)
-    {
-      state = STATE_ERROR;
-    }
-    etimer_set(&fsm_periodic_timer, NET_CONNECT_PERIODIC);
-    return;
-    break;
-  }
-
-  /**
-   * IDLE state: the mote is correctly connected with the broker and ready
-   * to execute its nominal behavour.
-   */
-  case STATE_IDLE:
-  {
-    printf("STATE IDLE\n");
-    return;
-    break;
-  }
-
-  /**
-   * PUBLISHING state: try to publish a message. If the queue is full, schedule
-   * a retry.
-   */
-  case STATE_PUBLISHING:
-  {
-    printf("STATE Publishing\n");
-
-    if(mqtt_ready(&conn) && conn.out_buffer_sent)
-    {
-      //leds_on(STATUS_LED);
-      //ctimer_set(&ct, PUBLISH_LED_ON_DURATION, publish_led_off, NULL);
-      publish();
-
-      etimer_set(&fsm_periodic_timer, pub_interval);
-
-      DBG("Publishing\n");
-      return;
-    }
-    else
-    {
-      DBG("Publishing error (MQTT state=%d, q=%u)\n", conn.state,
-          conn.out_queue_full);
-    }
-    break;
-  }
-
-  /**
-   * DISCONNECTED state: the mote has received a DISCONNECTED event. Retry to
-   * connect.
-   */
-  case STATE_DISCONNECTED:
-  {
-    printf("STATE DISCONNECTED\n");
-
-    if(connect_attempt < RECONNECT_ATTEMPTS) {
-      /* Disconnect and backoff */
-      clock_time_t interval;
-      mqtt_disconnect(&conn);
-      connect_attempt++;
-
-      interval = connect_attempt < 3 ? RECONNECT_INTERVAL << connect_attempt :
-        RECONNECT_INTERVAL << 3;
-
-      DBG("Disconnected. Attempt %u in %lu ticks\n", connect_attempt, interval);
-
-      etimer_set(&fsm_periodic_timer, interval);
-
-      state = STATE_CONNECTING;
-      return;
-    } else {
-      /* Max reconnect attempts reached. Enter error state */
-      state = STATE_ERROR;
-      DBG("Aborting connection after %u attempts\n", connect_attempt - 1);
-    }
-    break;
-  }
-
-  /**
-   * ERROR state: light up a led.
-   */
-  case STATE_ERROR:
-  {
-    // TODO led blink
-    break;
-  }
-  }
-
-  /* If we didn't return so far, reschedule state machine */
-  etimer_set(&fsm_periodic_timer, STATE_MACHINE_PERIODIC);
-}
-
-
-/*-------------------------MAIN PROCESS--------------------------------------*/
-PROCESS_THREAD(mqtt_fsm_process, ev, data)
-{
-  PROCESS_BEGIN();
-  printf("Smart citofono started\n");
-
-  /* Init client id */
-  snprintf(client_id, APP_BUFFER_SIZE, "d:%s:%s:%02x%02x%02x%02x%02x%02x",
-           org_id, type_id,
-           linkaddr_node_addr.u8[0], linkaddr_node_addr.u8[1],
-           linkaddr_node_addr.u8[2], linkaddr_node_addr.u8[5],
-           linkaddr_node_addr.u8[6], linkaddr_node_addr.u8[7]);
-
-  /* Init fsm  */
-  seq_nr_value = 0;
-  state = STATE_INIT;
-  etimer_set(&fsm_periodic_timer, 0); // schedule first state machine event
-
-  /* Main loop */
-  while(1) {
-
-    PROCESS_WAIT_EVENT();
-
-    /* If it's an internal event, advance the mqtt state machine */
-    if((ev == PROCESS_EVENT_TIMER && data == &fsm_periodic_timer) ||
-       ev == PROCESS_EVENT_POLL)
-    {
-      state_machine();
-    }
-
-    /* If the state is IDLE, execute the mote-specific IDLE handler. Each
-     * mote type has a specific state handler (e.g. interphone and remote
-     * controller).
+    switch(state) {
+    /**
+     * INIT state: initialize the mqtt driver and set last will. This state
+     * performs a spontaneous transition to the CONNECTING state when it's finished.
      */
-    if(state == STATE_IDLE)
+    case STATE_INIT:
     {
-      enum next_action_t next = idle_state_handler(ev, data);
+      printf("APP [%s] - STATE INIT\n", type_id);
+      mqtt_status_t status = mqtt_register(&conn, mqtt_fsm_process, client_id,
+                                          mqtt_event_handler, MAX_TCP_SEGMENT_SIZE);
 
-      if(next == PUBLISH)
+      if(status == MQTT_STATUS_OK)
       {
-        state = STATE_PUBLISHING;
+        //mqtt_set_last_will()...
+        connect_attempt = 0;
+        state = STATE_DISCONNECTED;
       }
-      else if(next == ERROR)
+      else
+      {
+        state = STATE_ERROR;
+        return;
+      }
+
+    }
+    /* Continue (i.e. spontaneous transition to next state). */
+
+    /**
+     * DISCONNECTED state: try to connect to the broker. The mote
+     * can exit this state either by receiving a MQTT_EVENT_CONNECTED, handled
+     * in the mqtt_event_handler(), or because of an error.
+     */
+    case STATE_DISCONNECTED:
+    {
+      printf("APP [%s] - STATE DISCONNECTED, Connect attempt %u\n",
+        type_id, connect_attempt);
+
+      /* Calculate backoff */
+      clock_time_t interval = connect_attempt < 3 ?
+                  RECONNECT_INTERVAL << connect_attempt :RECONNECT_INTERVAL << 3;
+
+      mqtt_status_t status = mqtt_connect(&conn, broker_ip, broker_port,
+                     PUB_INTERVAL * 3);
+
+      if(status != MQTT_STATUS_OK)
       {
         state = STATE_ERROR;
       }
+
+      /* Reschedule */
+      etimer_set(&fsm_periodic_timer, interval);
+      connect_attempt++;
+      break;
+    }
+
+    /**
+     * CONNECTED state: try to subscribe to the sub_topic. The subscription
+     * needs to be confirmed by the broker. The mote
+     * can exit this state either by receiving a MQTT_EVENT_SUBACK, handled
+     * in the mqtt_event_handler(), or because of an error.
+     */
+    case STATE_CONNECTED:
+    {
+      printf("APP [%s] - STATE CONNECTED\n", type_id);
+      connect_attempt = 1;
+
+      mqtt_status_t status = mqtt_subscribe(&conn, NULL, sub_topic,
+                                              MQTT_QOS_LEVEL_1);
+
+      DBG("APP - Subscribing!\n");
+      if(status != MQTT_STATUS_OK)
+      {
+        state = STATE_ERROR;
+      }
+
+      /* Reschedule */
+      etimer_set(&fsm_periodic_timer, SUBSCRIBE_INTERVAL);
+      break;
+    }
+
+    /**
+     * PUBLISHING state: try to publish a message. If the queue is full, schedule
+     * a retry. The state can be exited when receiving a PUBACK message.
+     */
+    case STATE_PUBLISHING:
+    {
+      DBG("APP [%s] - STATE Publishing\n", type_id);
+
+      if(mqtt_ready(&conn) && conn.out_buffer_sent)
+      {
+        mqtt_publish(&conn, NULL, pub_topic, (uint8_t *)send_buffer,
+                 strlen(send_buffer), MQTT_QOS_LEVEL_0, MQTT_RETAIN_OFF);
+        state = STATE_IDLE;
+
+        DBG("APP - Publish!\n");
+      }
+      else
+      {
+        DBG("Publishing error (MQTT state=%d, q=%u)\n", conn.state,
+            conn.out_queue_full);
+      }
+
+      /*  Reschedule */
+      etimer_set(&fsm_periodic_timer, PUB_INTERVAL);
+      break;
+    }
+
+    /**
+     * ERROR state: light up a led.
+     */
+    case STATE_ERROR:
+    {
+      leds_on(LEDS_RED);
+      break;
+    }
     }
   }
-
-  PROCESS_END();
 }
