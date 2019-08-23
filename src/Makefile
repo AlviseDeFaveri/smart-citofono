@@ -6,5 +6,5 @@ APPS += mqtt
 
 PROJECT_SOURCEFILES= common.c
 
-CONTIKI = ../..
+CONTIKI = ../../..
 include $(CONTIKI)/Makefile.include

@@ -194,10 +194,9 @@ void idle_state_handler(process_event_t ev, process_data_t data)
     // When open timeout is received, finish opening and return to idle.
     case CITOFONO_STATE_OPENING:
     {
-      stopGate();
-
       if(ev == PROCESS_EVENT_TIMER && data == &open_timer)
       {
+        stopGate();
         printf("APP [citofono] - Gate opened\n");
         mqtt_fsm_publish(CITOFONO_OPENED);
         mote_state = CITOFONO_STATE_IDLE;
