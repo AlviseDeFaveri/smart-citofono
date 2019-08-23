@@ -6,3 +6,4 @@ To run the simulation:
 * on a terminal: `sudo ~/contiki/tools/tunslip6 -a 127.0.0.1 aaaa::1/64`
 * add contiki/apps/smart-citofono/common.c as mote
 * start
+* `mosquitto_sub -h localhost -t "#"`

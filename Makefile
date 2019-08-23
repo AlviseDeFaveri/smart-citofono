@@ -1,10 +1,10 @@
-CONTIKI_PROJECT = common
-all: common
+CONTIKI_PROJECT = citofono
+all: citofono
 
 CONTIKI_WITH_IPV6 = 1
 APPS += mqtt
 
-PROJECT_SOURCEFILES= mote-impl.c
+PROJECT_SOURCEFILES= common.c
 
 CONTIKI = ../..
 include $(CONTIKI)/Makefile.include
