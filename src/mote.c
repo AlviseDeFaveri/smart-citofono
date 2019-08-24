@@ -17,7 +17,7 @@
 #define BROKER_PORT  1883
 #define TYPE_ID      "mote"
 #define SUB_TOPIC    "iot-2/evt/status/fmt/json"
-#define PUB_TOPIC    "iot-2/cmd/ack/fmt/json"
+#define PUB_TOPIC    "iot-2/cmd/mote/fmt/json"
 
 #define MOTE_STATE_INIT         0
 #define MOTE_STATE_IDLE         1
