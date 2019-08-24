@@ -91,13 +91,14 @@ void mqtt_fsm_publish(char payload)
   snprintf(send_buffer, APP_BUFFER_SIZE,
            "{"
            "\"d\":{"
-           "\"id\":%c,"
+           "\"id\":\"%c\","
            "\"seq\":\"%d\","
-           "\"source\":\"%s\","
+           "\"type\":\"%s-%x\","
            "\"uptime\":%lu}}",
            payload,
            seq_nr_value,
-           client_id,
+           type_id,
+           linkaddr_node_addr.u8[7],
            clock_seconds());
   state = STATE_PUBLISHING;
 

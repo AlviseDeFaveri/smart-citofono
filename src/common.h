@@ -19,8 +19,8 @@
 #define STATE_ERROR        0xFF
 
 // Where to search for the payload inside a published message
-#define STATE_OFFSET_IN_MSG  11
-#define SEQ_OFFSET_IN_MSG    20
+#define STATE_OFFSET_IN_MSG  12
+#define SEQ_OFFSET_IN_MSG    21
 
 typedef void (*IdleHandler)(process_event_t ev, process_data_t data);
 typedef void (*PubHandler) (const char *topic, uint16_t topic_len,
