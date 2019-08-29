@@ -14,6 +14,8 @@
 #include "dev/button-sensor.h"
 #include "dev/leds.h"
 
+#include "dev/serial-line.h"
+
 /* Configuration */
 #define BROKER_IP    "aaaa::1"
 #define BROKER_PORT  1883
@@ -55,7 +57,7 @@ AUTOSTART_PROCESSES(&mqtt_fsm_process);
 
 inline void openGate()
 {
-  printf("APP [citofono] - Opening gate\n");
+  printf("APP [citofono] - Openig Gate\n");
   leds_on(LEDS_GREEN);
 }
 
@@ -66,11 +68,11 @@ inline void stopGate()
 
 inline void startRinging()
 {
-  printf("APP [citofono] - Interphone ringing\n");
+  printf("APP [citofono] - Received a call on the interphone\n");
 
   etimer_set(&ring_timer, RING_INTERVAL);
   mqtt_fsm_publish(CITOFONO_RINGING);
-  leds_toggle(LEDS_BLUE);
+  leds_on(LEDS_BLUE);
 }
 
 inline void stopRinging()
@@ -90,16 +92,16 @@ void handleHeartbeat()
   switch(mote_state)
   {
     case CITOFONO_STATE_IDLE:
-      DBG("APP [citofono] - Sending IDLE\n");
+      printf("APP [citofono] - Sending MQTT message: IDLE\n");
       mqtt_fsm_publish(CITOFONO_IDLE);
       break;
     case CITOFONO_STATE_RINGING:
-      DBG("APP [citofono] - Sending RINGING\n");
+      printf("APP [citofono] - Sending MQTT message: RINGING\n");
       mqtt_fsm_publish(CITOFONO_RINGING);
       break;
     case CITOFONO_STATE_OPEN_RCV:
     case CITOFONO_STATE_OPENING:
-      DBG("APP [citofono] - Sending OPENING\n");
+      printf("APP [citofono] - Sending MQTT message: OPENING\n");
       mqtt_fsm_publish(CITOFONO_OPENING);
       break;
   }
@@ -114,6 +116,9 @@ void handleHeartbeat()
 void pub_handler(const char *topic, uint16_t topic_len, const uint8_t *chunk,
                     uint16_t chunk_len)
 {
+
+  DBG("APP [citofono] - MQTT message received");
+
   // Check messages id
   switch(chunk[STATE_OFFSET_IN_MSG])
   {
@@ -121,19 +126,18 @@ void pub_handler(const char *topic, uint16_t topic_len, const uint8_t *chunk,
     case MOTE_OPEN:
       if(mote_state == CITOFONO_STATE_RINGING)
       {
-        printf("APP [citofono] - Open message received\n");
+        printf("APP [citofono] - OPEN command received\n");
         mote_state = CITOFONO_STATE_OPEN_RCV;
       }
       break;
     // handle ping at next heartbeat
     case MOTE_PING:
-      printf("APP [citofono] - Ping received\n");
+      printf("APP [citofono] - PING command received\n");
       ping = 1;
       break;
   }
 
   process_poll(&mqtt_fsm_process);
-  DBG("APP [citofono] - Received message!");
 }
 
 
@@ -153,7 +157,10 @@ void idle_state_handler(process_event_t ev, process_data_t data)
       stopRinging();
       stopGate();
 
-      if(ev == sensors_event && data == &INTERPHONE_CALL_SENSOR)
+      // Interphone call can be simulated either with a button press or a message
+      // on the serial port
+      if( (ev == sensors_event && data == &INTERPHONE_CALL_SENSOR)
+        || ev == serial_line_event_message)
       {
         startRinging();
 
@@ -172,7 +179,7 @@ void idle_state_handler(process_event_t ev, process_data_t data)
       }
       else if(ev == PROCESS_EVENT_TIMER && data == &ring_timeout)
       {
-        printf("APP [citofono] - Timer expired, gate not opened\n");
+        printf("APP [citofono] - Timeout for opening the gate expired: gate not opened\n");
         mqtt_fsm_publish(CITOFONO_NOT_OPENED);
         mote_state = CITOFONO_STATE_IDLE;
       }
@@ -197,7 +204,7 @@ void idle_state_handler(process_event_t ev, process_data_t data)
       if(ev == PROCESS_EVENT_TIMER && data == &open_timer)
       {
         stopGate();
-        printf("APP [citofono] - Gate opened\n");
+        printf("APP [citofono] - GATE OPEN\n");
         mqtt_fsm_publish(CITOFONO_OPENED);
         mote_state = CITOFONO_STATE_IDLE;
       }
@@ -212,7 +219,7 @@ void idle_state_handler(process_event_t ev, process_data_t data)
 PROCESS_THREAD(mqtt_fsm_process, ev, data)
 {
   PROCESS_BEGIN();
-  printf("APP [citofono] - Smart-citofono interphone started\n");
+  printf("APP [citofono] - Interphone started\n");
 
   /* Initialize the mqtt state machine */
   mqtt_fsm_init(BROKER_IP, BROKER_PORT, TYPE_ID, PUB_TOPIC, SUB_TOPIC,
@@ -229,7 +236,7 @@ PROCESS_THREAD(mqtt_fsm_process, ev, data)
   {
     PROCESS_WAIT_EVENT();
 
-    /* Handle heartbeat and reschedule */
+    /* Handle heartbeat */
     if(ev == PROCESS_EVENT_TIMER && data == &heartbeat_timer)
     {
       handleHeartbeat();

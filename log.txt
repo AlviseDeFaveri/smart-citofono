@@ -1,267 +1,1453 @@
-00:00.236   ID:2    APP [citofono] - Smart-citofono interphone started
+00:00.236   ID:2    Contiki-bc2e445 started. Node id is set to 2.
+00:00.236   ID:2    Rime started with address 0.2.0.2.0.2.0.2
+00:00.236   ID:2    MAC 00:02:00:02:00:02:00:02 sicslowpan/CSMA/nullrdc, channel check rate 1000 Hz
+00:00.236   ID:2    Tentative link-local IPv6 address fe80:0000:0000:0000:0202:0002:0002:0002
+00:00.236   ID:2    Tentative global IPv6 address fd00:0000:0000:0000:0202:0002:0002:0002
+00:00.236   ID:2    Starting 'MQTT Smart Citofono'
+00:00.236   ID:2    APP [citofono] - Interphone started
 00:00.236   ID:2    APP [citofono] - STATE INIT
+00:00.236   ID:2    MQTT - Registered successfully
 00:00.236   ID:2    APP [citofono] - STATE DISCONNECTED, Connect attempt 0
-00:00.348   ID:4    APP [mote] - Smart-citofono mote started
+00:00.236   ID:2    MQTT - Got mqtt_do_connect_tcp_event!
+00:00.348   ID:4    Contiki-bc2e445 started. Node id is set to 4.
+00:00.348   ID:4    Rime started with address 0.4.0.4.0.4.0.4
+00:00.348   ID:4    MAC 00:04:00:04:00:04:00:04 sicslowpan/CSMA/nullrdc, channel check rate 1000 Hz
+00:00.348   ID:4    Tentative link-local IPv6 address fe80:0000:0000:0000:0204:0004:0004:0004
+00:00.348   ID:4    Tentative global IPv6 address fd00:0000:0000:0000:0204:0004:0004:0004
+00:00.348   ID:4    Starting 'MQTT Smart Citofono mote'
+00:00.348   ID:4    APP [mote] - Mote started
 00:00.348   ID:4    APP [mote] - STATE INIT
+00:00.348   ID:4    MQTT - Registered successfully
 00:00.348   ID:4    APP [mote] - STATE DISCONNECTED, Connect attempt 0
-00:00.899   ID:3    APP [mote] - Smart-citofono mote started
+00:00.348   ID:4    MQTT - Got mqtt_do_connect_tcp_event!
+00:00.382   ID:1    Contiki-bc2e445 started. Node id is set to 1.
+00:00.382   ID:1    Rime started with address 0.1.0.1.0.1.0.1
+00:00.382   ID:1    MAC 00:01:00:01:00:01:00:01 sicslowpan/CSMA/nullrdc, channel check rate 1000 Hz
+00:00.382   ID:1    Tentative link-local IPv6 address fe80:0000:0000:0000:0201:0001:0001:0001
+00:00.382   ID:1    Tentative global IPv6 address fd00:0000:0000:0000:0201:0001:0001:0001
+00:00.382   ID:1    Starting 'Border router process' 'Web server'
+00:00.382   ID:1    ?PGot configuration message of type P
+00:00.382   ID:1    Setting prefix aaaa::
+00:00.899   ID:3    Contiki-bc2e445 started. Node id is set to 3.
+00:00.899   ID:3    Rime started with address 0.3.0.3.0.3.0.3
+00:00.899   ID:3    MAC 00:03:00:03:00:03:00:03 sicslowpan/CSMA/nullrdc, channel check rate 1000 Hz
+00:00.899   ID:3    Tentative link-local IPv6 address fe80:0000:0000:0000:0203:0003:0003:0003
+00:00.899   ID:3    Tentative global IPv6 address fd00:0000:0000:0000:0203:0003:0003:0003
+00:00.899   ID:3    Starting 'MQTT Smart Citofono mote'
+00:00.899   ID:3    APP [mote] - Mote started
 00:00.899   ID:3    APP [mote] - STATE INIT
+00:00.899   ID:3    MQTT - Registered successfully
 00:00.899   ID:3    APP [mote] - STATE DISCONNECTED, Connect attempt 0
+00:00.899   ID:3    MQTT - Got mqtt_do_connect_tcp_event!
+00:01.382   ID:1    Server IPv6 addresses:
+00:01.382   ID:1     aaaa::201:1:1:1
+00:01.382   ID:1     fd00::201:1:1:1
+00:01.382   ID:1     fe80::201:1:1:1
 00:02.236   ID:2    APP [citofono] - STATE DISCONNECTED, Connect attempt 1
 00:02.348   ID:4    APP [mote] - STATE DISCONNECTED, Connect attempt 1
 00:02.899   ID:3    APP [mote] - STATE DISCONNECTED, Connect attempt 1
+00:03.899   ID:3    #L 1 1; red
+00:03.904   ID:1    `?[`/)slip-bridge: Destination off-link but no route src=aaaa::1 dst=aaaa::203:3:3:3
+00:04.940   ID:1    slip-bridge: Destination off-link but no route src=aaaa::1 dst=aaaa::203:3:3:3
+00:05.236   ID:2    APP [citofono] - Sending MQTT message: IDLE
+00:05.236   ID:2    APP [citofono] - STATE Publishing
+00:05.236   ID:2    Publishing error (MQTT state=6, q=0)
 00:06.348   ID:4    APP [mote] - STATE DISCONNECTED, Connect attempt 2
+00:06.736   ID:2    #L 1 1; red
+00:06.741   ID:1    `?[`/-slip-bridge: Destination off-link but no route src=aaaa::1 dst=aaaa::202:2:2:2
+00:06.848   ID:4    #L 1 1; red
+00:06.853   ID:1    `?[`/%slip-bridge: Destination off-link but no route src=aaaa::1 dst=aaaa::204:4:4:4
 00:06.899   ID:3    APP [mote] - STATE DISCONNECTED, Connect attempt 2
-00:14.348   ID:4    APP [mote] - STATE DISCONNECTED, Connect attempt 3
-00:14.899   ID:3    APP [mote] - STATE DISCONNECTED, Connect attempt 3
-00:25.747   ID:2    APP [citofono] - STATE DISCONNECTED, Connect attempt 2
-00:25.871   ID:4    APP [mote] - STATE DISCONNECTED, Connect attempt 4
-00:25.911   ID:2    APP [citofono] - STATE CONNECTED
-00:26.162   ID:4    APP [mote] - STATE CONNECTED
-00:26.411   ID:3    APP [mote] - STATE DISCONNECTED, Connect attempt 4
-00:26.597   ID:3    APP [mote] - STATE CONNECTED
-00:43.406   ID:2    APP [citofono] - Interphone ringing
-00:43.567   ID:4    APP [mote] - Ringing
-00:43.567   ID:4    APP [mote] - RINGING state
-00:43.567   ID:4    APP [mote] - Ringing
-00:43.567   ID:4    APP [mote] - RINGING state
-00:43.587   ID:3    APP [mote] - Ringing
-00:43.587   ID:3    APP [mote] - RINGING state
-00:43.587   ID:3    APP [mote] - Ringing
-00:43.587   ID:3    APP [mote] - RINGING state
-00:45.406   ID:2    APP [citofono] - Interphone ringing
-00:45.420   ID:4    APP [mote] - Ringing
-00:45.420   ID:4    APP [mote] - RINGING state
-00:45.420   ID:4    APP [mote] - Ringing
-00:45.420   ID:4    APP [mote] - RINGING state
-00:45.473   ID:3    APP [mote] - Ringing
-00:45.473   ID:3    APP [mote] - RINGING state
-00:45.473   ID:3    APP [mote] - Ringing
-00:45.473   ID:3    APP [mote] - RINGING state
-00:45.675   ID:4    APP [mote] - Ringing
-00:45.675   ID:4    APP [mote] - RINGING state
-00:45.675   ID:4    APP [mote] - Ringing
-00:45.675   ID:4    APP [mote] - RINGING state
-00:45.695   ID:3    APP [mote] - Ringing
-00:45.695   ID:3    APP [mote] - RINGING state
-00:45.695   ID:3    APP [mote] - Ringing
-00:45.695   ID:3    APP [mote] - RINGING state
-00:47.406   ID:2    APP [citofono] - Interphone ringing
-00:47.597   ID:4    APP [mote] - Ringing
-00:47.597   ID:4    APP [mote] - RINGING state
-00:47.597   ID:4    APP [mote] - Ringing
-00:47.597   ID:4    APP [mote] - RINGING state
-00:47.625   ID:3    APP [mote] - Ringing
-00:47.625   ID:3    APP [mote] - RINGING state
-00:47.625   ID:3    APP [mote] - Ringing
-00:47.625   ID:3    APP [mote] - RINGING state
-00:49.406   ID:2    APP [citofono] - Interphone ringing
-00:49.572   ID:4    APP [mote] - Ringing
-00:49.572   ID:4    APP [mote] - RINGING state
-00:49.572   ID:4    APP [mote] - Ringing
-00:49.572   ID:4    APP [mote] - RINGING state
-00:49.594   ID:3    APP [mote] - Ringing
-00:49.594   ID:3    APP [mote] - RINGING state
-00:49.594   ID:3    APP [mote] - Ringing
-00:49.594   ID:3    APP [mote] - RINGING state
-00:50.415   ID:4    APP [mote] - Ringing
-00:50.415   ID:4    APP [mote] - RINGING state
-00:50.415   ID:4    APP [mote] - Ringing
-00:50.415   ID:4    APP [mote] - RINGING state
-00:50.438   ID:3    APP [mote] - Ringing
-00:50.438   ID:3    APP [mote] - RINGING state
-00:50.438   ID:3    APP [mote] - Ringing
-00:50.438   ID:3    APP [mote] - RINGING state
-00:51.149   ID:4    APP [mote] - Ringing
-00:51.149   ID:4    APP [mote] - RINGING state
-00:51.149   ID:4    APP [mote] - Sending OPEN message
-00:51.302   ID:2    APP [citofono] - Open message received
-00:51.302   ID:2    APP [citofono] - Opening gate
-00:53.302   ID:2    APP [citofono] - Gate opened
-01:01.757   ID:2    APP [citofono] - Interphone ringing
-01:01.928   ID:4    APP [mote] - Ringing
-01:01.928   ID:4    APP [mote] - RINGING state
-01:01.928   ID:4    APP [mote] - Ringing
-01:01.928   ID:4    APP [mote] - RINGING state
-01:01.959   ID:3    APP [mote] - Ringing
-01:01.959   ID:3    APP [mote] - RINGING state
-01:01.959   ID:3    APP [mote] - Ringing
-01:01.959   ID:3    APP [mote] - RINGING state
-01:03.757   ID:2    APP [citofono] - Interphone ringing
-01:03.933   ID:4    APP [mote] - Ringing
-01:03.933   ID:4    APP [mote] - RINGING state
-01:03.933   ID:4    APP [mote] - Ringing
-01:03.933   ID:4    APP [mote] - RINGING state
-01:03.954   ID:3    APP [mote] - Ringing
-01:03.954   ID:3    APP [mote] - RINGING state
-01:03.954   ID:3    APP [mote] - Ringing
-01:03.954   ID:3    APP [mote] - RINGING state
-01:05.404   ID:4    APP [mote] - Ringing
-01:05.404   ID:4    APP [mote] - RINGING state
-01:05.404   ID:4    APP [mote] - Ringing
-01:05.404   ID:4    APP [mote] - RINGING state
-01:05.426   ID:3    APP [mote] - Ringing
-01:05.426   ID:3    APP [mote] - RINGING state
-01:05.426   ID:3    APP [mote] - Ringing
-01:05.426   ID:3    APP [mote] - RINGING state
-01:05.757   ID:2    APP [citofono] - Interphone ringing
-01:05.925   ID:4    APP [mote] - Ringing
-01:05.925   ID:4    APP [mote] - RINGING state
-01:05.925   ID:4    APP [mote] - Ringing
-01:05.925   ID:4    APP [mote] - RINGING state
-01:05.945   ID:3    APP [mote] - Ringing
-01:05.945   ID:3    APP [mote] - RINGING state
-01:05.945   ID:3    APP [mote] - Ringing
-01:05.945   ID:3    APP [mote] - RINGING state
-01:07.757   ID:2    APP [citofono] - Interphone ringing
-01:07.932   ID:4    APP [mote] - Ringing
-01:07.932   ID:4    APP [mote] - RINGING state
-01:07.932   ID:4    APP [mote] - Ringing
-01:07.932   ID:4    APP [mote] - RINGING state
-01:07.958   ID:3    APP [mote] - Ringing
-01:07.958   ID:3    APP [mote] - RINGING state
-01:07.958   ID:3    APP [mote] - Ringing
-01:07.958   ID:3    APP [mote] - RINGING state
-01:09.757   ID:2    APP [citofono] - Interphone ringing
-01:09.928   ID:4    APP [mote] - Ringing
-01:09.928   ID:4    APP [mote] - RINGING state
-01:09.928   ID:4    APP [mote] - Ringing
-01:09.928   ID:4    APP [mote] - RINGING state
-01:09.953   ID:3    APP [mote] - Ringing
-01:09.953   ID:3    APP [mote] - RINGING state
-01:09.953   ID:3    APP [mote] - Ringing
-01:09.953   ID:3    APP [mote] - RINGING state
-01:10.405   ID:4    APP [mote] - Ringing
-01:10.405   ID:4    APP [mote] - RINGING state
-01:10.405   ID:4    APP [mote] - Ringing
-01:10.405   ID:4    APP [mote] - RINGING state
-01:10.435   ID:3    APP [mote] - Ringing
-01:10.435   ID:3    APP [mote] - RINGING state
-01:10.435   ID:3    APP [mote] - Ringing
-01:10.435   ID:3    APP [mote] - RINGING state
-01:11.757   ID:2    APP [citofono] - Interphone ringing
-01:11.924   ID:4    APP [mote] - Ringing
-01:11.924   ID:4    APP [mote] - RINGING state
-01:11.924   ID:4    APP [mote] - Ringing
-01:11.924   ID:4    APP [mote] - RINGING state
-01:11.945   ID:3    APP [mote] - Ringing
-01:11.945   ID:3    APP [mote] - RINGING state
-01:11.945   ID:3    APP [mote] - Ringing
-01:11.945   ID:3    APP [mote] - RINGING state
-01:13.757   ID:2    APP [citofono] - Interphone ringing
-01:13.932   ID:4    APP [mote] - Ringing
-01:13.932   ID:4    APP [mote] - RINGING state
-01:13.932   ID:4    APP [mote] - Ringing
-01:13.932   ID:4    APP [mote] - RINGING state
-01:13.953   ID:3    APP [mote] - Ringing
-01:13.953   ID:3    APP [mote] - RINGING state
-01:13.953   ID:3    APP [mote] - Ringing
-01:13.953   ID:3    APP [mote] - RINGING state
-01:15.402   ID:4    APP [mote] - Ringing
-01:15.402   ID:4    APP [mote] - RINGING state
-01:15.402   ID:4    APP [mote] - Ringing
-01:15.402   ID:4    APP [mote] - RINGING state
-01:15.422   ID:3    APP [mote] - Ringing
-01:15.422   ID:3    APP [mote] - RINGING state
-01:15.422   ID:3    APP [mote] - Ringing
-01:15.422   ID:3    APP [mote] - RINGING state
-01:15.757   ID:2    APP [citofono] - Interphone ringing
-01:15.919   ID:4    APP [mote] - Ringing
-01:15.919   ID:4    APP [mote] - RINGING state
-01:15.919   ID:4    APP [mote] - Ringing
-01:15.919   ID:4    APP [mote] - RINGING state
-01:15.940   ID:3    APP [mote] - Ringing
-01:15.940   ID:3    APP [mote] - RINGING state
-01:15.940   ID:3    APP [mote] - Ringing
-01:15.940   ID:3    APP [mote] - RINGING state
-01:17.757   ID:2    APP [citofono] - Interphone ringing
-01:17.925   ID:4    APP [mote] - Ringing
-01:17.925   ID:4    APP [mote] - RINGING state
-01:17.925   ID:4    APP [mote] - Ringing
-01:17.925   ID:4    APP [mote] - RINGING state
-01:17.947   ID:3    APP [mote] - Ringing
-01:17.947   ID:3    APP [mote] - RINGING state
-01:17.947   ID:3    APP [mote] - Ringing
-01:17.947   ID:3    APP [mote] - RINGING state
-01:19.757   ID:2    APP [citofono] - Interphone ringing
-01:19.928   ID:4    APP [mote] - Ringing
-01:19.928   ID:4    APP [mote] - RINGING state
-01:19.928   ID:4    APP [mote] - Ringing
-01:19.928   ID:4    APP [mote] - RINGING state
-01:19.949   ID:3    APP [mote] - Ringing
-01:19.949   ID:3    APP [mote] - RINGING state
-01:19.949   ID:3    APP [mote] - Ringing
-01:19.949   ID:3    APP [mote] - RINGING state
-01:20.401   ID:4    APP [mote] - Ringing
-01:20.401   ID:4    APP [mote] - RINGING state
-01:20.401   ID:4    APP [mote] - Ringing
-01:20.401   ID:4    APP [mote] - RINGING state
-01:20.421   ID:3    APP [mote] - Ringing
-01:20.421   ID:3    APP [mote] - RINGING state
-01:20.421   ID:3    APP [mote] - Ringing
-01:20.421   ID:3    APP [mote] - RINGING state
-01:21.757   ID:2    APP [citofono] - Interphone ringing
-01:21.924   ID:4    APP [mote] - Ringing
-01:21.924   ID:4    APP [mote] - RINGING state
-01:21.924   ID:4    APP [mote] - Ringing
-01:21.924   ID:4    APP [mote] - RINGING state
-01:21.945   ID:3    APP [mote] - Ringing
-01:21.945   ID:3    APP [mote] - RINGING state
-01:21.945   ID:3    APP [mote] - Ringing
-01:21.945   ID:3    APP [mote] - RINGING state
-01:23.757   ID:2    APP [citofono] - Interphone ringing
-01:23.920   ID:4    APP [mote] - Ringing
-01:23.920   ID:4    APP [mote] - RINGING state
-01:23.920   ID:4    APP [mote] - Ringing
-01:23.920   ID:4    APP [mote] - RINGING state
-01:23.941   ID:3    APP [mote] - Ringing
-01:23.941   ID:3    APP [mote] - RINGING state
-01:23.941   ID:3    APP [mote] - Ringing
-01:23.941   ID:3    APP [mote] - RINGING state
-01:25.407   ID:4    APP [mote] - Ringing
-01:25.407   ID:4    APP [mote] - RINGING state
-01:25.407   ID:4    APP [mote] - Ringing
-01:25.407   ID:4    APP [mote] - RINGING state
-01:25.427   ID:3    APP [mote] - Ringing
-01:25.427   ID:3    APP [mote] - RINGING state
-01:25.427   ID:3    APP [mote] - Ringing
-01:25.427   ID:3    APP [mote] - RINGING state
-01:25.757   ID:2    APP [citofono] - Interphone ringing
-01:25.935   ID:4    APP [mote] - Ringing
-01:25.935   ID:4    APP [mote] - RINGING state
-01:25.935   ID:4    APP [mote] - Ringing
-01:25.935   ID:4    APP [mote] - RINGING state
-01:25.958   ID:3    APP [mote] - Ringing
-01:25.958   ID:3    APP [mote] - RINGING state
-01:25.958   ID:3    APP [mote] - Ringing
-01:25.958   ID:3    APP [mote] - RINGING state
-01:27.757   ID:2    APP [citofono] - Interphone ringing
-01:27.937   ID:4    APP [mote] - Ringing
-01:27.937   ID:4    APP [mote] - RINGING state
-01:27.937   ID:4    APP [mote] - Ringing
-01:27.937   ID:4    APP [mote] - RINGING state
-01:27.961   ID:3    APP [mote] - Ringing
-01:27.961   ID:3    APP [mote] - RINGING state
-01:27.961   ID:3    APP [mote] - Ringing
-01:27.961   ID:3    APP [mote] - RINGING state
-01:29.757   ID:2    APP [citofono] - Interphone ringing
-01:29.938   ID:4    APP [mote] - Ringing
-01:29.938   ID:4    APP [mote] - RINGING state
-01:29.938   ID:4    APP [mote] - Ringing
-01:29.938   ID:4    APP [mote] - RINGING state
-01:29.958   ID:3    APP [mote] - Ringing
-01:29.958   ID:3    APP [mote] - RINGING state
-01:29.958   ID:3    APP [mote] - Ringing
-01:29.958   ID:3    APP [mote] - RINGING state
-01:30.416   ID:4    APP [mote] - Ringing
-01:30.416   ID:4    APP [mote] - RINGING state
-01:30.416   ID:4    APP [mote] - Ringing
-01:30.416   ID:4    APP [mote] - RINGING state
-01:30.436   ID:3    APP [mote] - Ringing
-01:30.436   ID:3    APP [mote] - RINGING state
-01:30.436   ID:3    APP [mote] - Ringing
-01:30.436   ID:3    APP [mote] - RINGING state
-01:31.757   ID:2    APP [citofono] - Interphone ringing
-01:31.757   ID:2    APP [citofono] - Timer expired, gate not opened
-01:39.431   ID:4    APP [mote] - Button pressed but no incoming call
-01:43.288   ID:3    APP [mote] - Button pressed but no incoming call
+00:06.958   ID:1    slip-bridge: Destination off-link but no route src=aaaa::1 dst=aaaa::203:3:3:3
+00:07.399   ID:3    #L 1 0; red
+00:07.399   ID:3    #L 1 1; red
+00:07.404   ID:1    `?[`/)slip-bridge: Destination off-link but no route src=aaaa::1 dst=aaaa::203:3:3:3
+00:07.751   ID:1    slip-bridge: Destination off-link but no route src=aaaa::1 dst=aaaa::202:2:2:2
+00:07.879   ID:1    slip-bridge: Destination off-link but no route src=aaaa::1 dst=aaaa::204:4:4:4
+00:09.754   ID:1    #L 2 1; red
+00:09.760   ID:2    #L 1 0; red
+00:09.760   ID:2    #L 1 1; red
+00:09.760   ID:2    MQTT - Got mqtt_do_connect_mqtt_event!
+00:09.760   ID:2    MQTT - Sending CONNECT message...
+00:09.760   ID:2    MQTT - Encoding length 38
+00:09.760   ID:2    MQTT - Encode len digit '38' length '0'
+00:09.760   ID:2    MQTT - remaining_length_bytes 1
+00:09.760   ID:2    MQTT - (write_byte) buff_size: 512 write: '10'
+00:09.760   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:09.760   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:09.760   ID:2    MQTT - (write_byte) buff_size: 509 write: '06'
+00:09.760   ID:2    MQTT - (write_bytes) len: 6 write_pos: 6
+00:09.760   ID:2    MQTT - (write_byte) buff_size: 502 write: '03'
+00:09.760   ID:2    MQTT - (write_byte) buff_size: 501 write: '02'
+00:09.760   ID:2    MQTT - (write_byte) buff_size: 500 write: '75'
+00:09.760   ID:2    MQTT - (write_byte) buff_size: 499 write: '30'
+00:09.760   ID:2    MQTT - (write_byte) buff_size: 498 write: '00'
+00:09.760   ID:2    MQTT - (write_byte) buff_size: 497 write: '18'
+00:09.760   ID:2    MQTT - (write_bytes) len: 24 write_pos: 24
+00:09.760   ID:2    MQTT - (send_out_buffer) Space used in buffer: 40
+00:09.767   ID:2    #L 1 0; red
+00:09.767   ID:2    #L 1 1; red
+00:09.774   ID:1    `?[&Po`4?[&Pk&MQIsdpu0d:smartcit:citof#L 2 0; red
+00:09.774   ID:1    #L 2 1; red
+00:09.780   ID:2    MQTT - Got TCP_DATA_SENT
+00:09.780   ID:2    #L 1 0; red
+00:09.780   ID:2    #L 1 1; red
+00:09.787   ID:1    `?[!&PV4ono:0002#L 2 0; red
+00:09.787   ID:1    #L 2 1; red
+00:09.792   ID:2    MQTT - Got TCP_DATA_SENT
+00:09.793   ID:1    #L 2 0; red
+00:09.793   ID:1    #L 2 1; red
+00:09.799   ID:2    tcp_input with 4 bytes of data:
+00:09.799   ID:2    MQTT - Read VHDR '20'
+00:09.799   ID:2    MQTT - Read Remaining Length byte
+00:09.799   ID:2    MQTT - Finished reading remaining length byte
+00:09.799   ID:2    - Copied 2 payload bytes
+00:09.799   ID:2    MQTT - Copied bytes:
+00:09.799   ID:2    00 00
+00:09.799   ID:2
+00:09.799   ID:2    MQTT - Finished reading packet!
+00:09.799   ID:2    MQTT - total data was 3 bytes of data.
+00:09.799   ID:2    MQTT - Got CONNACK
+00:09.799   ID:2    APP - Application has a MQTT connection
+00:09.799   ID:2    #L 1 0; red
+00:09.799   ID:2    #L 1 1; red
+00:09.799   ID:2    MQTT - Done sending CONNECT
+00:09.799   ID:2    MQTT - CONNECT message sent:
+00:09.799   ID:2
+00:09.799   ID:2    APP [citofono] - STATE CONNECTED
+00:09.799   ID:2    MQTT - Call to mqtt_subscribe...
+00:09.799   ID:2    MQTT - Accepted!
+00:09.799   ID:2    APP - Subscribing!
+00:09.801   ID:1    #L 2 0; red
+00:09.801   ID:1    #L 4 1; red
+00:09.807   ID:2    MQTT - Got mqtt_do_subscribe_mqtt_event!
+00:09.807   ID:2    MQTT - Sending subscribe message! topic iot-2/cmd/+/fmt/json topic_length 20
+00:09.807   ID:2    MQTT - Buffer space is 512
+00:09.807   ID:2    MQTT - Encoding length 25
+00:09.807   ID:2    MQTT - Encode len digit '25' length '0'
+00:09.807   ID:2    MQTT - remaining_length_bytes 1
+00:09.807   ID:2    MQTT - (write_byte) buff_size: 512 write: '82'
+00:09.807   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:09.807   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:09.807   ID:2    MQTT - (write_byte) buff_size: 509 write: '03'
+00:09.807   ID:2    MQTT - (write_byte) buff_size: 508 write: '00'
+00:09.807   ID:2    MQTT - (write_byte) buff_size: 507 write: '14'
+00:09.807   ID:2    MQTT - (write_bytes) len: 20 write_pos: 20
+00:09.807   ID:2    MQTT - (write_byte) buff_size: 486 write: '01'
+00:09.807   ID:2    MQTT - (send_out_buffer) Space used in buffer: 27
+00:09.807   ID:2    #L 1 0; red
+00:09.807   ID:2    #L 1 1; red
+00:09.814   ID:4    #L 1 0; red
+00:09.814   ID:4    #L 1 1; red
+00:09.814   ID:4    MQTT - Got mqtt_do_connect_mqtt_event!
+00:09.814   ID:4    MQTT - Sending CONNECT message...
+00:09.814   ID:4    MQTT - Encoding length 34
+00:09.814   ID:4    MQTT - Encode len digit '34' length '0'
+00:09.814   ID:4    MQTT - remaining_length_bytes 1
+00:09.814   ID:4    MQTT - (write_byte) buff_size: 512 write: '10'
+00:09.814   ID:4    MQTT - (write_bytes) len: 1 write_pos: 1
+00:09.814   ID:4    MQTT - (write_byte) buff_size: 510 write: '00'
+00:09.814   ID:4    MQTT - (write_byte) buff_size: 509 write: '06'
+00:09.814   ID:4    MQTT - (write_bytes) len: 6 write_pos: 6
+00:09.814   ID:4    MQTT - (write_byte) buff_size: 502 write: '03'
+00:09.814   ID:4    MQTT - (write_byte) buff_size: 501 write: '02'
+00:09.814   ID:4    MQTT - (write_byte) buff_size: 500 write: '75'
+00:09.814   ID:4    MQTT - (write_byte) buff_size: 499 write: '30'
+00:09.814   ID:4    MQTT - (write_byte) buff_size: 498 write: '00'
+00:09.814   ID:4    MQTT - (write_byte) buff_size: 497 write: '14'
+00:09.814   ID:4    MQTT - (write_bytes) len: 20 write_pos: 20
+00:09.814   ID:4    MQTT - (send_out_buffer) Space used in buffer: 36
+00:09.821   ID:4    #L 1 0; red
+00:09.821   ID:4    #L 1 1; red
+00:09.830   ID:1    `?[)&PC`?[jLPn`/?[)&PZiot-2/cmd/+/fmt/json#L 4 0; red
+00:09.830   ID:1    #L 2 1; red
+00:09.851   ID:2    MQTT - Got TCP_DATA_SENT
+00:09.851   ID:2    tcp_input with 5 bytes of data:
+00:09.851   ID:2    MQTT - Read VHDR '90'
+00:09.851   ID:2    MQTT - Read Remaining Length byte
+00:09.851   ID:2    MQTT - Finished reading remaining length byte
+00:09.851   ID:2    - Copied 3 payload bytes
+00:09.851   ID:2    MQTT - Copied bytes:
+00:09.851   ID:2    00 03 01
+00:09.851   ID:2
+00:09.851   ID:2    MQTT - Finished reading packet!
+00:09.851   ID:2    MQTT - total data was 4 bytes of data.
+00:09.851   ID:2    MQTT - Got SUBACK
+00:09.851   ID:2    APP - Application is subscribed to topic successfully
+00:09.851   ID:2    #L 1 0; red
+00:09.851   ID:2    #L 1 1; red
+00:09.851   ID:2    MQTT - Done in send_subscribe!
+00:09.856   ID:1    `4?[jLP"MQIsdpu0d:smartcit:mote:`?[D&P##L 2 0; red
+00:09.856   ID:1    #L 4 1; red
+00:09.862   ID:4    MQTT - Got TCP_DATA_SENT
+00:09.862   ID:4    #L 1 0; red
+00:09.862   ID:4    #L 1 1; red
+00:09.966   ID:1    `?[!jLP/0004#L 4 0; red
+00:09.966   ID:1    #L 4 1; red
+00:09.971   ID:4    MQTT - Got TCP_DATA_SENT
+00:09.972   ID:1    #L 4 0; red
+00:09.972   ID:1    #L 4 1; red
+00:09.978   ID:4    tcp_input with 4 bytes of data:
+00:09.978   ID:4    MQTT - Read VHDR '20'
+00:09.978   ID:4    MQTT - Read Remaining Length byte
+00:09.978   ID:4    MQTT - Finished reading remaining length byte
+00:09.978   ID:4    - Copied 2 payload bytes
+00:09.978   ID:4    MQTT - Copied bytes:
+00:09.978   ID:4    00 00
+00:09.978   ID:4
+00:09.978   ID:4    MQTT - Finished reading packet!
+00:09.978   ID:4    MQTT - total data was 3 bytes of data.
+00:09.978   ID:4    MQTT - Got CONNACK
+00:09.978   ID:4    APP - Application has a MQTT connection
+00:09.978   ID:4    #L 1 0; red
+00:09.978   ID:4    #L 1 1; red
+00:09.978   ID:4    MQTT - Done sending CONNECT
+00:09.978   ID:4    MQTT - CONNECT message sent:
+00:09.978   ID:4
+00:09.978   ID:4    APP [mote] - STATE CONNECTED
+00:09.978   ID:4    MQTT - Call to mqtt_subscribe...
+00:09.978   ID:4    MQTT - Accepted!
+00:09.978   ID:4    APP - Subscribing!
+00:09.986   ID:4    MQTT - Got mqtt_do_subscribe_mqtt_event!
+00:09.986   ID:4    MQTT - Sending subscribe message! topic iot-2/evt/status/fmt/json topic_length 25
+00:09.986   ID:4    MQTT - Buffer space is 512
+00:09.986   ID:4    MQTT - Encoding length 30
+00:09.986   ID:4    MQTT - Encode len digit '30' length '0'
+00:09.986   ID:4    MQTT - remaining_length_bytes 1
+00:09.986   ID:4    MQTT - (write_byte) buff_size: 512 write: '82'
+00:09.986   ID:4    MQTT - (write_bytes) len: 1 write_pos: 1
+00:09.986   ID:4    MQTT - (write_byte) buff_size: 510 write: '00'
+00:09.986   ID:4    MQTT - (write_byte) buff_size: 509 write: '03'
+00:09.986   ID:4    MQTT - (write_byte) buff_size: 508 write: '00'
+00:09.986   ID:4    MQTT - (write_byte) buff_size: 507 write: '19'
+00:09.986   ID:4    MQTT - (write_bytes) len: 25 write_pos: 25
+00:09.986   ID:4    MQTT - (write_byte) buff_size: 481 write: '01'
+00:09.986   ID:4    MQTT - (send_out_buffer) Space used in buffer: 32
+00:09.986   ID:4    #L 1 0; red
+00:09.986   ID:4    #L 1 1; red
+00:09.994   ID:1    `?[%jLPF`4?[%jLP,`iot-2/evt/status/fmt/json#L 4 0; red
+00:09.994   ID:1    #L 4 1; red
+00:10.000   ID:4    MQTT - Got TCP_DATA_SENT
+00:10.000   ID:4    tcp_input with 5 bytes of data:
+00:10.000   ID:4    MQTT - Read VHDR '90'
+00:10.000   ID:4    MQTT - Read Remaining Length byte
+00:10.000   ID:4    MQTT - Finished reading remaining length byte
+00:10.000   ID:4    - Copied 3 payload bytes
+00:10.000   ID:4    MQTT - Copied bytes:
+00:10.000   ID:4    00 03 01
+00:10.000   ID:4
+00:10.000   ID:4    MQTT - Finished reading packet!
+00:10.000   ID:4    MQTT - total data was 4 bytes of data.
+00:10.000   ID:4    MQTT - Got SUBACK
+00:10.000   ID:4    APP - Application is subscribed to topic successfully
+00:10.000   ID:4    #L 1 0; red
+00:10.000   ID:4    #L 1 1; red
+00:10.000   ID:4    MQTT - Done in send_subscribe!
+00:10.236   ID:2    APP [citofono] - Sending MQTT message: IDLE
+00:10.236   ID:2    APP [citofono] - STATE Publishing
+00:10.236   ID:2    MQTT - Call to mqtt_publish...
+00:10.236   ID:2    MQTT - Accepted!
+00:10.236   ID:2    APP - Publish!
+00:10.236   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:10.236   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:10.236   ID:2    MQTT - Buffer space is 512
+00:10.236   ID:2    MQTT - Encoding length 85
+00:10.236   ID:2    MQTT - Encode len digit '85' length '0'
+00:10.236   ID:2    MQTT - remaining_length_bytes 1
+00:10.236   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:10.236   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:10.236   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:10.236   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:10.236   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:10.236   ID:2    MQTT - (write_bytes) len: 58 write_pos: 58
+00:10.236   ID:2    MQTT - (send_out_buffer) Space used in buffer: 87
+00:10.236   ID:2    MQTT - Publish Enqueued
+00:10.237   ID:2    #L 1 0; red
+00:10.237   ID:2    #L 1 1; red
+00:10.307   ID:1    `?[EjLP!`4?[D&P`+0Uiot-2/evt/status/fmt/json{"d#L 4 0; red
+00:10.307   ID:1    #L 2 1; red
+00:10.312   ID:2    MQTT - Got TCP_DATA_SENT
+00:10.312   ID:2    #L 1 0; red
+00:10.312   ID:2    #L 1 1; red
+00:10.319   ID:1    `4?[d&P;":{"id":"i","seq":"2","type":"ci#L 2 0; red
+00:10.319   ID:1    #L 2 1; red
+00:10.325   ID:2    MQTT - Got TCP_DATA_SENT
+00:10.325   ID:2    #L 1 0; red
+00:10.325   ID:2    #L 1 1; red
+00:10.373   ID:1    `+?[&Ptofono-2","uptime":10}}#L 2 0; red
+00:10.373   ID:1    #L 2 1; red
+00:10.377   ID:2    MQTT - Got TCP_DATA_SENT
+00:10.378   ID:1    #L 2 0; red
+00:10.378   ID:1    #L 4 1; red
+00:10.392   ID:4    tcp_input with 87 bytes of data:
+00:10.392   ID:4    MQTT - Read VHDR '30'
+00:10.392   ID:4    MQTT - Read Remaining Length byte
+00:10.392   ID:4    MQTT - Finished reading remaining length byte
+00:10.392   ID:4    MQTT - Read PUBLISH topic len 25
+00:10.392   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:10.392   ID:4    MQTT - Copied bytes:
+00:10.392   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 32 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 31 30 7D 7D
+00:10.392   ID:4
+00:10.392   ID:4    MQTT - Finished reading packet!
+00:10.392   ID:4    MQTT - total data was 86 bytes of data.
+00:10.392   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:10.392   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:10.392   ID:4    MQTT - This chunk is 58 bytes
+00:10.392   ID:4    APP - Application received a msg from a subscription
+00:10.392   ID:4    APP [mote] - Received MQTT message from the interphone
+00:10.392   ID:4    APP [mote] - Received IDLE
+00:10.392   ID:4    MQTT - (handle_publish) resetting packet.
+00:10.392   ID:4    #L 1 0; red
+00:10.392   ID:4    #L 1 1; red
+00:10.392   ID:4    APP [mote] - IDLE state
+00:10.392   ID:4    APP [mote] - IDLE state
+00:11.297   ID:1    `?[EjLtP#L 4 0; red
+00:11.297   ID:1    #L 3 1; red
+00:11.303   ID:3    #L 1 0; red
+00:11.303   ID:3    #L 1 1; red
+00:11.303   ID:3    MQTT - Got mqtt_do_connect_mqtt_event!
+00:11.303   ID:3    MQTT - Sending CONNECT message...
+00:11.303   ID:3    MQTT - Encoding length 34
+00:11.303   ID:3    MQTT - Encode len digit '34' length '0'
+00:11.303   ID:3    MQTT - remaining_length_bytes 1
+00:11.303   ID:3    MQTT - (write_byte) buff_size: 512 write: '10'
+00:11.303   ID:3    MQTT - (write_bytes) len: 1 write_pos: 1
+00:11.303   ID:3    MQTT - (write_byte) buff_size: 510 write: '00'
+00:11.303   ID:3    MQTT - (write_byte) buff_size: 509 write: '06'
+00:11.303   ID:3    MQTT - (write_bytes) len: 6 write_pos: 6
+00:11.303   ID:3    MQTT - (write_byte) buff_size: 502 write: '03'
+00:11.303   ID:3    MQTT - (write_byte) buff_size: 501 write: '02'
+00:11.303   ID:3    MQTT - (write_byte) buff_size: 500 write: '75'
+00:11.303   ID:3    MQTT - (write_byte) buff_size: 499 write: '30'
+00:11.303   ID:3    MQTT - (write_byte) buff_size: 498 write: '00'
+00:11.303   ID:3    MQTT - (write_byte) buff_size: 497 write: '14'
+00:11.303   ID:3    MQTT - (write_bytes) len: 20 write_pos: 20
+00:11.303   ID:3    MQTT - (send_out_buffer) Space used in buffer: 36
+00:11.310   ID:3    #L 1 0; red
+00:11.310   ID:3    #L 1 1; red
+00:11.317   ID:1    `?[1^Pp`4?[1^P"MQIsdpu0d:smartcit:mote:#L 3 0; red
+00:11.317   ID:1    #L 3 1; red
+00:11.323   ID:3    MQTT - Got TCP_DATA_SENT
+00:11.323   ID:3    #L 1 0; red
+00:11.323   ID:3    #L 1 1; red
+00:11.365   ID:1    `?[!1^Pd0003#L 3 0; red
+00:11.365   ID:1    #L 3 1; red
+00:11.369   ID:3    MQTT - Got TCP_DATA_SENT
+00:11.370   ID:1    #L 3 0; red
+00:11.370   ID:1    #L 3 1; red
+00:11.376   ID:3    tcp_input with 4 bytes of data:
+00:11.376   ID:3    MQTT - Read VHDR '20'
+00:11.376   ID:3    MQTT - Read Remaining Length byte
+00:11.376   ID:3    MQTT - Finished reading remaining length byte
+00:11.376   ID:3    - Copied 2 payload bytes
+00:11.376   ID:3    MQTT - Copied bytes:
+00:11.376   ID:3    00 00
+00:11.376   ID:3
+00:11.376   ID:3    MQTT - Finished reading packet!
+00:11.376   ID:3    MQTT - total data was 3 bytes of data.
+00:11.376   ID:3    MQTT - Got CONNACK
+00:11.376   ID:3    APP - Application has a MQTT connection
+00:11.376   ID:3    #L 1 0; red
+00:11.376   ID:3    #L 1 1; red
+00:11.376   ID:3    MQTT - Done sending CONNECT
+00:11.376   ID:3    MQTT - CONNECT message sent:
+00:11.376   ID:3
+00:11.376   ID:3    APP [mote] - STATE CONNECTED
+00:11.376   ID:3    MQTT - Call to mqtt_subscribe...
+00:11.376   ID:3    MQTT - Accepted!
+00:11.376   ID:3    APP - Subscribing!
+00:11.384   ID:3    MQTT - Got mqtt_do_subscribe_mqtt_event!
+00:11.384   ID:3    MQTT - Sending subscribe message! topic iot-2/evt/status/fmt/json topic_length 25
+00:11.384   ID:3    MQTT - Buffer space is 512
+00:11.384   ID:3    MQTT - Encoding length 30
+00:11.384   ID:3    MQTT - Encode len digit '30' length '0'
+00:11.384   ID:3    MQTT - remaining_length_bytes 1
+00:11.384   ID:3    MQTT - (write_byte) buff_size: 512 write: '82'
+00:11.384   ID:3    MQTT - (write_bytes) len: 1 write_pos: 1
+00:11.384   ID:3    MQTT - (write_byte) buff_size: 510 write: '00'
+00:11.384   ID:3    MQTT - (write_byte) buff_size: 509 write: '03'
+00:11.384   ID:3    MQTT - (write_byte) buff_size: 508 write: '00'
+00:11.384   ID:3    MQTT - (write_byte) buff_size: 507 write: '19'
+00:11.384   ID:3    MQTT - (write_bytes) len: 25 write_pos: 25
+00:11.384   ID:3    MQTT - (write_byte) buff_size: 481 write: '01'
+00:11.384   ID:3    MQTT - (send_out_buffer) Space used in buffer: 32
+00:11.384   ID:3    #L 1 0; red
+00:11.384   ID:3    #L 1 1; red
+00:11.392   ID:1    `?[%1^Pp`4?[%1^Piot-2/evt/status/fmt/json#L 3 0; red
+00:11.392   ID:1    #L 3 1; red
+00:11.398   ID:3    MQTT - Got TCP_DATA_SENT
+00:11.398   ID:3    tcp_input with 5 bytes of data:
+00:11.398   ID:3    MQTT - Read VHDR '90'
+00:11.398   ID:3    MQTT - Read Remaining Length byte
+00:11.398   ID:3    MQTT - Finished reading remaining length byte
+00:11.398   ID:3    - Copied 3 payload bytes
+00:11.398   ID:3    MQTT - Copied bytes:
+00:11.398   ID:3    00 03 01
+00:11.398   ID:3
+00:11.398   ID:3    MQTT - Finished reading packet!
+00:11.398   ID:3    MQTT - total data was 4 bytes of data.
+00:11.398   ID:3    MQTT - Got SUBACK
+00:11.398   ID:3    APP - Application is subscribed to topic successfully
+00:11.398   ID:3    #L 1 0; red
+00:11.398   ID:3    #L 1 1; red
+00:11.398   ID:3    MQTT - Done in send_subscribe!
+00:15.236   ID:2    APP [citofono] - Sending MQTT message: IDLE
+00:15.236   ID:2    APP [citofono] - STATE Publishing
+00:15.236   ID:2    MQTT - Call to mqtt_publish...
+00:15.236   ID:2    MQTT - Accepted!
+00:15.236   ID:2    APP - Publish!
+00:15.236   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:15.236   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:15.236   ID:2    MQTT - Buffer space is 512
+00:15.236   ID:2    MQTT - Encoding length 85
+00:15.236   ID:2    MQTT - Encode len digit '85' length '0'
+00:15.236   ID:2    MQTT - remaining_length_bytes 1
+00:15.236   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:15.236   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:15.236   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:15.236   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:15.236   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:15.236   ID:2    MQTT - (write_bytes) len: 58 write_pos: 58
+00:15.236   ID:2    MQTT - (send_out_buffer) Space used in buffer: 87
+00:15.236   ID:2    MQTT - Publish Enqueued
+00:15.237   ID:2    #L 1 0; red
+00:15.237   ID:2    #L 1 1; red
+00:15.243   ID:1    `?[E1^Pp`4?[&P_0Uiot-2/evt/status/fmt/json{"d#L 3 0; red
+00:15.243   ID:1    #L 2 1; red
+00:15.249   ID:2    MQTT - Got TCP_DATA_SENT
+00:15.249   ID:2    #L 1 0; red
+00:15.249   ID:2    #L 1 1; red
+00:15.303   ID:1    `4?[&P":{"id":"i","seq":"3","type":"ci#L 2 0; red
+00:15.303   ID:1    #L 2 1; red
+00:15.308   ID:2    MQTT - Got TCP_DATA_SENT
+00:15.308   ID:2    #L 1 0; red
+00:15.308   ID:2    #L 1 1; red
+00:15.350   ID:1    `+?[&Ptofono-2","uptime":15}}#L 2 0; red
+00:15.350   ID:1    #L 2 1; red
+00:15.354   ID:2    MQTT - Got TCP_DATA_SENT
+00:15.355   ID:1    #L 2 0; red
+00:15.355   ID:1    #L 4 1; red
+00:15.369   ID:4    tcp_input with 87 bytes of data:
+00:15.369   ID:4    MQTT - Read VHDR '30'
+00:15.369   ID:4    MQTT - Read Remaining Length byte
+00:15.369   ID:4    MQTT - Finished reading remaining length byte
+00:15.369   ID:4    MQTT - Read PUBLISH topic len 25
+00:15.369   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:15.369   ID:4    MQTT - Copied bytes:
+00:15.369   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 33 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 31 35 7D 7D
+00:15.369   ID:4
+00:15.369   ID:4    MQTT - Finished reading packet!
+00:15.369   ID:4    MQTT - total data was 86 bytes of data.
+00:15.369   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:15.369   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:15.369   ID:4    MQTT - This chunk is 58 bytes
+00:15.369   ID:4    APP - Application received a msg from a subscription
+00:15.369   ID:4    APP [mote] - Received MQTT message from the interphone
+00:15.369   ID:4    APP [mote] - Received IDLE
+00:15.369   ID:4    MQTT - (handle_publish) resetting packet.
+00:15.369   ID:4    #L 1 0; red
+00:15.369   ID:4    #L 1 1; red
+00:15.369   ID:4    APP [mote] - IDLE state
+00:15.369   ID:4    APP [mote] - IDLE state
+00:15.371   ID:1    #L 4 0; red
+00:15.371   ID:1    #L 3 1; red
+00:15.389   ID:3    tcp_input with 87 bytes of data:
+00:15.389   ID:3    MQTT - Read VHDR '30'
+00:15.389   ID:3    MQTT - Read Remaining Length byte
+00:15.389   ID:3    MQTT - Finished reading remaining length byte
+00:15.389   ID:3    MQTT - Read PUBLISH topic len 25
+00:15.389   ID:3    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:15.389   ID:3    MQTT - Copied bytes:
+00:15.389   ID:3    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 33 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 31 35 7D 7D
+00:15.389   ID:3
+00:15.389   ID:3    MQTT - Finished reading packet!
+00:15.389   ID:3    MQTT - total data was 86 bytes of data.
+00:15.389   ID:3    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:15.389   ID:3    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:15.389   ID:3    MQTT - This chunk is 58 bytes
+00:15.389   ID:3    APP - Application received a msg from a subscription
+00:15.389   ID:3    APP [mote] - Received MQTT message from the interphone
+00:15.389   ID:3    APP [mote] - Received IDLE
+00:15.389   ID:3    MQTT - (handle_publish) resetting packet.
+00:15.389   ID:3    #L 1 0; red
+00:15.389   ID:3    #L 1 1; red
+00:15.389   ID:3    APP [mote] - IDLE state
+00:15.389   ID:3    APP [mote] - IDLE state
+00:19.978   ID:4    APP [mote] - IDLE state
+00:20.236   ID:2    APP [citofono] - Sending MQTT message: IDLE
+00:20.236   ID:2    APP [citofono] - STATE Publishing
+00:20.236   ID:2    MQTT - Call to mqtt_publish...
+00:20.236   ID:2    MQTT - Accepted!
+00:20.236   ID:2    APP - Publish!
+00:20.236   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:20.236   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:20.236   ID:2    MQTT - Buffer space is 512
+00:20.236   ID:2    MQTT - Encoding length 85
+00:20.236   ID:2    MQTT - Encode len digit '85' length '0'
+00:20.236   ID:2    MQTT - remaining_length_bytes 1
+00:20.236   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:20.236   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:20.236   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:20.236   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:20.236   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:20.236   ID:2    MQTT - (write_bytes) len: 58 write_pos: 58
+00:20.236   ID:2    MQTT - (send_out_buffer) Space used in buffer: 87
+00:20.236   ID:2    MQTT - Publish Enqueued
+00:20.237   ID:2    #L 1 0; red
+00:20.237   ID:2    #L 1 1; red
+00:20.243   ID:1    `?[EjLPs`?[E1^*PpO`4?[&P_}0Uiot-2/evt/status/fmt/json{"d#L 3 0; red
+00:20.243   ID:1    #L 2 1; red
+00:20.249   ID:2    MQTT - Got TCP_DATA_SENT
+00:20.249   ID:2    #L 1 0; red
+00:20.249   ID:2    #L 1 1; red
+00:20.302   ID:1    `4?[&P":{"id":"i","seq":"4","type":"ci#L 2 0; red
+00:20.302   ID:1    #L 2 1; red
+00:20.307   ID:2    MQTT - Got TCP_DATA_SENT
+00:20.307   ID:2    #L 1 0; red
+00:20.307   ID:2    #L 1 1; red
+00:20.370   ID:1    `+?[2&P@tofono-2","uptime":20}}#L 2 0; red
+00:20.370   ID:1    #L 2 1; red
+00:20.374   ID:2    MQTT - Got TCP_DATA_SENT
+00:20.375   ID:1    #L 2 0; red
+00:20.375   ID:1    #L 4 1; red
+00:20.389   ID:4    tcp_input with 87 bytes of data:
+00:20.389   ID:4    MQTT - Read VHDR '30'
+00:20.389   ID:4    MQTT - Read Remaining Length byte
+00:20.389   ID:4    MQTT - Finished reading remaining length byte
+00:20.389   ID:4    MQTT - Read PUBLISH topic len 25
+00:20.389   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:20.389   ID:4    MQTT - Copied bytes:
+00:20.389   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 34 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 32 30 7D 7D
+00:20.389   ID:4
+00:20.389   ID:4    MQTT - Finished reading packet!
+00:20.389   ID:4    MQTT - total data was 86 bytes of data.
+00:20.389   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:20.389   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:20.389   ID:4    MQTT - This chunk is 58 bytes
+00:20.389   ID:4    APP - Application received a msg from a subscription
+00:20.389   ID:4    APP [mote] - Received MQTT message from the interphone
+00:20.389   ID:4    APP [mote] - Received IDLE
+00:20.389   ID:4    MQTT - (handle_publish) resetting packet.
+00:20.389   ID:4    #L 1 0; red
+00:20.389   ID:4    #L 1 1; red
+00:20.389   ID:4    APP [mote] - IDLE state
+00:20.389   ID:4    APP [mote] - IDLE state
+00:20.391   ID:1    #L 4 0; red
+00:20.391   ID:1    #L 3 1; red
+00:20.409   ID:3    tcp_input with 87 bytes of data:
+00:20.409   ID:3    MQTT - Read VHDR '30'
+00:20.409   ID:3    MQTT - Read Remaining Length byte
+00:20.409   ID:3    MQTT - Finished reading remaining length byte
+00:20.409   ID:3    MQTT - Read PUBLISH topic len 25
+00:20.409   ID:3    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:20.409   ID:3    MQTT - Copied bytes:
+00:20.409   ID:3    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 34 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 32 30 7D 7D
+00:20.409   ID:3
+00:20.409   ID:3    MQTT - Finished reading packet!
+00:20.409   ID:3    MQTT - total data was 86 bytes of data.
+00:20.409   ID:3    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:20.409   ID:3    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:20.409   ID:3    MQTT - This chunk is 58 bytes
+00:20.409   ID:3    APP - Application received a msg from a subscription
+00:20.409   ID:3    APP [mote] - Received MQTT message from the interphone
+00:20.409   ID:3    APP [mote] - Received IDLE
+00:20.409   ID:3    MQTT - (handle_publish) resetting packet.
+00:20.409   ID:3    #L 1 0; red
+00:20.409   ID:3    #L 1 1; red
+00:20.409   ID:3    APP [mote] - IDLE state
+00:20.409   ID:3    APP [mote] - IDLE state
+00:21.376   ID:3    APP [mote] - IDLE state
+00:25.236   ID:2    APP [citofono] - Sending MQTT message: IDLE
+00:25.236   ID:2    APP [citofono] - STATE Publishing
+00:25.236   ID:2    MQTT - Call to mqtt_publish...
+00:25.236   ID:2    MQTT - Accepted!
+00:25.236   ID:2    APP - Publish!
+00:25.236   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:25.236   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:25.236   ID:2    MQTT - Buffer space is 512
+00:25.236   ID:2    MQTT - Encoding length 85
+00:25.236   ID:2    MQTT - Encode len digit '85' length '0'
+00:25.236   ID:2    MQTT - remaining_length_bytes 1
+00:25.236   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:25.236   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:25.236   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:25.236   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:25.236   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:25.236   ID:2    MQTT - (write_bytes) len: 58 write_pos: 58
+00:25.236   ID:2    MQTT - (send_out_buffer) Space used in buffer: 87
+00:25.236   ID:2    MQTT - Publish Enqueued
+00:25.237   ID:2    #L 1 0; red
+00:25.237   ID:2    #L 1 1; red
+00:25.244   ID:1    `?[EjM"P`?[E1^Po`4?[I&P_&0Uiot-2/evt/status/fmt/json{"d#L 3 0; red
+00:25.244   ID:1    #L 2 1; red
+00:25.249   ID:2    MQTT - Got TCP_DATA_SENT
+00:25.249   ID:2    #L 1 0; red
+00:25.249   ID:2    #L 1 1; red
+00:25.289   ID:1    `4?[i&P3":{"id":"i","seq":"5","type":"ci#L 2 0; red
+00:25.289   ID:1    #L 2 1; red
+00:25.294   ID:2    MQTT - Got TCP_DATA_SENT
+00:25.294   ID:2    #L 1 0; red
+00:25.294   ID:2    #L 1 1; red
+00:25.333   ID:1    `+?[&Ptofono-2","uptime":25}}#L 2 0; red
+00:25.333   ID:1    #L 2 1; red
+00:25.337   ID:2    MQTT - Got TCP_DATA_SENT
+00:25.338   ID:1    #L 2 0; red
+00:25.338   ID:1    #L 4 1; red
+00:25.352   ID:4    tcp_input with 87 bytes of data:
+00:25.352   ID:4    MQTT - Read VHDR '30'
+00:25.352   ID:4    MQTT - Read Remaining Length byte
+00:25.352   ID:4    MQTT - Finished reading remaining length byte
+00:25.352   ID:4    MQTT - Read PUBLISH topic len 25
+00:25.352   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:25.352   ID:4    MQTT - Copied bytes:
+00:25.352   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 35 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 32 35 7D 7D
+00:25.352   ID:4
+00:25.352   ID:4    MQTT - Finished reading packet!
+00:25.352   ID:4    MQTT - total data was 86 bytes of data.
+00:25.352   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:25.352   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:25.352   ID:4    MQTT - This chunk is 58 bytes
+00:25.352   ID:4    APP - Application received a msg from a subscription
+00:25.352   ID:4    APP [mote] - Received MQTT message from the interphone
+00:25.352   ID:4    APP [mote] - Received IDLE
+00:25.352   ID:4    MQTT - (handle_publish) resetting packet.
+00:25.352   ID:4    #L 1 0; red
+00:25.352   ID:4    #L 1 1; red
+00:25.352   ID:4    APP [mote] - IDLE state
+00:25.352   ID:4    APP [mote] - IDLE state
+00:25.354   ID:1    #L 4 0; red
+00:25.354   ID:1    #L 3 1; red
+00:25.374   ID:3    tcp_input with 87 bytes of data:
+00:25.374   ID:3    MQTT - Read VHDR '30'
+00:25.374   ID:3    MQTT - Read Remaining Length byte
+00:25.374   ID:3    MQTT - Finished reading remaining length byte
+00:25.374   ID:3    MQTT - Read PUBLISH topic len 25
+00:25.374   ID:3    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:25.374   ID:3    MQTT - Copied bytes:
+00:25.374   ID:3    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 35 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 32 35 7D 7D
+00:25.374   ID:3
+00:25.374   ID:3    MQTT - Finished reading packet!
+00:25.374   ID:3    MQTT - total data was 86 bytes of data.
+00:25.374   ID:3    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:25.374   ID:3    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:25.374   ID:3    MQTT - This chunk is 58 bytes
+00:25.374   ID:3    APP - Application received a msg from a subscription
+00:25.374   ID:3    APP [mote] - Received MQTT message from the interphone
+00:25.374   ID:3    APP [mote] - Received IDLE
+00:25.374   ID:3    MQTT - (handle_publish) resetting packet.
+00:25.374   ID:3    #L 1 0; red
+00:25.374   ID:3    #L 1 1; red
+00:25.374   ID:3    APP [mote] - IDLE state
+00:25.374   ID:3    APP [mote] - IDLE state
+00:30.236   ID:2    APP [citofono] - Sending MQTT message: IDLE
+00:30.236   ID:2    APP [citofono] - STATE Publishing
+00:30.236   ID:2    MQTT - Call to mqtt_publish...
+00:30.236   ID:2    MQTT - Accepted!
+00:30.236   ID:2    APP - Publish!
+00:30.236   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:30.236   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:30.236   ID:2    MQTT - Buffer space is 512
+00:30.236   ID:2    MQTT - Encoding length 85
+00:30.236   ID:2    MQTT - Encode len digit '85' length '0'
+00:30.236   ID:2    MQTT - remaining_length_bytes 1
+00:30.236   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:30.236   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:30.236   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:30.236   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:30.236   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:30.236   ID:2    MQTT - (write_bytes) len: 58 write_pos: 58
+00:30.236   ID:2    MQTT - (send_out_buffer) Space used in buffer: 87
+00:30.236   ID:2    MQTT - Publish Enqueued
+00:30.237   ID:2    #L 1 0; red
+00:30.237   ID:2    #L 1 1; red
+00:30.243   ID:1    `?[EjMyP`?[E1^Po`4?[&P^0Uiot-2/evt/status/fmt/json{"d#L 3 0; red
+00:30.243   ID:1    #L 2 1; red
+00:30.249   ID:2    MQTT - Got TCP_DATA_SENT
+00:30.249   ID:2    #L 1 0; red
+00:30.249   ID:2    #L 1 1; red
+00:30.288   ID:1    `4?[&P":{"id":"i","seq":"6","type":"ci#L 2 0; red
+00:30.288   ID:1    #L 2 1; red
+00:30.293   ID:2    MQTT - Got TCP_DATA_SENT
+00:30.293   ID:2    #L 1 0; red
+00:30.293   ID:2    #L 1 1; red
+00:30.330   ID:1    `+?[&Ptofono-2","uptime":30}}#L 2 0; red
+00:30.330   ID:1    #L 2 1; red
+00:30.334   ID:2    MQTT - Got TCP_DATA_SENT
+00:30.335   ID:1    #L 2 0; red
+00:30.335   ID:1    #L 4 1; red
+00:30.349   ID:4    tcp_input with 87 bytes of data:
+00:30.349   ID:4    MQTT - Read VHDR '30'
+00:30.349   ID:4    MQTT - Read Remaining Length byte
+00:30.349   ID:4    MQTT - Finished reading remaining length byte
+00:30.349   ID:4    MQTT - Read PUBLISH topic len 25
+00:30.349   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:30.349   ID:4    MQTT - Copied bytes:
+00:30.349   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 36 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 30 7D 7D
+00:30.349   ID:4
+00:30.349   ID:4    MQTT - Finished reading packet!
+00:30.349   ID:4    MQTT - total data was 86 bytes of data.
+00:30.349   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:30.349   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:30.349   ID:4    MQTT - This chunk is 58 bytes
+00:30.349   ID:4    APP - Application received a msg from a subscription
+00:30.349   ID:4    APP [mote] - Received MQTT message from the interphone
+00:30.349   ID:4    APP [mote] - Received IDLE
+00:30.349   ID:4    MQTT - (handle_publish) resetting packet.
+00:30.349   ID:4    #L 1 0; red
+00:30.349   ID:4    #L 1 1; red
+00:30.349   ID:4    APP [mote] - IDLE state
+00:30.349   ID:4    APP [mote] - IDLE state
+00:30.351   ID:1    #L 4 0; red
+00:30.351   ID:1    #L 3 1; red
+00:30.370   ID:3    tcp_input with 87 bytes of data:
+00:30.370   ID:3    MQTT - Read VHDR '30'
+00:30.370   ID:3    MQTT - Read Remaining Length byte
+00:30.370   ID:3    MQTT - Finished reading remaining length byte
+00:30.370   ID:3    MQTT - Read PUBLISH topic len 25
+00:30.370   ID:3    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:30.370   ID:3    MQTT - Copied bytes:
+00:30.370   ID:3    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 36 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 30 7D 7D
+00:30.370   ID:3
+00:30.370   ID:3    MQTT - Finished reading packet!
+00:30.370   ID:3    MQTT - total data was 86 bytes of data.
+00:30.370   ID:3    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:30.370   ID:3    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:30.370   ID:3    MQTT - This chunk is 58 bytes
+00:30.370   ID:3    APP - Application received a msg from a subscription
+00:30.370   ID:3    APP [mote] - Received MQTT message from the interphone
+00:30.370   ID:3    APP [mote] - Received IDLE
+00:30.370   ID:3    MQTT - (handle_publish) resetting packet.
+00:30.370   ID:3    #L 1 0; red
+00:30.370   ID:3    #L 1 1; red
+00:30.370   ID:3    APP [mote] - IDLE state
+00:30.370   ID:3    APP [mote] - IDLE state
+00:32.728   ID:2    APP [citofono] - Received a call on the interphone
+00:32.728   ID:2    APP [citofono] - STATE Publishing
+00:32.728   ID:2    MQTT - Call to mqtt_publish...
+00:32.728   ID:2    MQTT - Accepted!
+00:32.728   ID:2    APP - Publish!
+00:32.728   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:32.728   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:32.728   ID:2    MQTT - Buffer space is 512
+00:32.728   ID:2    MQTT - Encoding length 85
+00:32.728   ID:2    MQTT - Encode len digit '85' length '0'
+00:32.728   ID:2    MQTT - remaining_length_bytes 1
+00:32.728   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:32.728   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:32.728   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:32.728   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:32.728   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:32.728   ID:2    MQTT - (write_bytes) len: 58 write_pos: 58
+00:32.728   ID:2    MQTT - (send_out_buffer) Space used in buffer: 87
+00:32.728   ID:2    MQTT - Publish Enqueued
+00:32.729   ID:2    #L 1 0; red
+00:32.729   ID:2    #L 1 1; red
+00:32.735   ID:1    `?[EjMPn`?[E1^/PoJ`4?[&P^x0Uiot-2/evt/status/fmt/json{"d#L 3 0; red
+00:32.735   ID:1    #L 2 1; red
+00:32.741   ID:2    MQTT - Got TCP_DATA_SENT
+00:32.741   ID:2    #L 1 0; red
+00:32.741   ID:2    #L 1 1; red
+00:32.800   ID:1    `4?[&Pz":{"id":"r","seq":"7","type":"ci#L 2 0; red
+00:32.800   ID:1    #L 2 1; red
+00:32.805   ID:2    MQTT - Got TCP_DATA_SENT
+00:32.805   ID:2    #L 1 0; red
+00:32.805   ID:2    #L 1 1; red
+00:32.842   ID:1    `+?[7&P:tofono-2","uptime":32}}#L 2 0; red
+00:32.842   ID:1    #L 2 1; red
+00:32.846   ID:2    MQTT - Got TCP_DATA_SENT
+00:32.847   ID:1    #L 2 0; red
+00:32.847   ID:1    #L 4 1; red
+00:32.861   ID:4    tcp_input with 87 bytes of data:
+00:32.861   ID:4    MQTT - Read VHDR '30'
+00:32.861   ID:4    MQTT - Read Remaining Length byte
+00:32.861   ID:4    MQTT - Finished reading remaining length byte
+00:32.861   ID:4    MQTT - Read PUBLISH topic len 25
+00:32.861   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:32.861   ID:4    MQTT - Copied bytes:
+00:32.861   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 72 22 2C 22 73 65 71 22 3A 22 37 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 32 7D 7D
+00:32.861   ID:4
+00:32.861   ID:4    MQTT - Finished reading packet!
+00:32.861   ID:4    MQTT - total data was 86 bytes of data.
+00:32.861   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:32.861   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:32.861   ID:4    MQTT - This chunk is 58 bytes
+00:32.861   ID:4    APP - Application received a msg from a subscription
+00:32.861   ID:4    APP [mote] - Received MQTT message from the interphone
+00:32.861   ID:4    APP [mote] - Received interphone call
+00:32.861   ID:4    MQTT - (handle_publish) resetting packet.
+00:32.861   ID:4    #L 1 0; red
+00:32.861   ID:4    #L 1 1; red
+00:32.861   ID:4    APP [mote] - Ringing
+00:32.861   ID:4    APP [mote] - RINGING state
+00:32.861   ID:4    APP [mote] - Ringing
+00:32.861   ID:4    APP [mote] - RINGING state
+00:32.863   ID:1    #L 4 0; red
+00:32.863   ID:1    #L 3 1; red
+00:32.883   ID:3    tcp_input with 87 bytes of data:
+00:32.883   ID:3    MQTT - Read VHDR '30'
+00:32.883   ID:3    MQTT - Read Remaining Length byte
+00:32.883   ID:3    MQTT - Finished reading remaining length byte
+00:32.883   ID:3    MQTT - Read PUBLISH topic len 25
+00:32.883   ID:3    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:32.883   ID:3    MQTT - Copied bytes:
+00:32.883   ID:3    7B 22 64 22 3A 7B 22 69 64 22 3A 22 72 22 2C 22 73 65 71 22 3A 22 37 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 32 7D 7D
+00:32.883   ID:3
+00:32.883   ID:3    MQTT - Finished reading packet!
+00:32.883   ID:3    MQTT - total data was 86 bytes of data.
+00:32.883   ID:3    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:32.883   ID:3    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:32.883   ID:3    MQTT - This chunk is 58 bytes
+00:32.883   ID:3    APP - Application received a msg from a subscription
+00:32.883   ID:3    APP [mote] - Received MQTT message from the interphone
+00:32.883   ID:3    APP [mote] - Received interphone call
+00:32.883   ID:3    MQTT - (handle_publish) resetting packet.
+00:32.883   ID:3    #L 1 0; red
+00:32.883   ID:3    #L 1 1; red
+00:32.883   ID:3    APP [mote] - Ringing
+00:32.883   ID:3    APP [mote] - RINGING state
+00:32.883   ID:3    APP [mote] - Ringing
+00:32.883   ID:3    APP [mote] - RINGING state
+00:34.728   ID:2    APP [citofono] - Received a call on the interphone
+00:34.728   ID:2    APP [citofono] - STATE Publishing
+00:34.728   ID:2    MQTT - Call to mqtt_publish...
+00:34.728   ID:2    MQTT - Accepted!
+00:34.728   ID:2    APP - Publish!
+00:34.728   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:34.728   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:34.728   ID:2    MQTT - Buffer space is 512
+00:34.728   ID:2    MQTT - Encoding length 85
+00:34.728   ID:2    MQTT - Encode len digit '85' length '0'
+00:34.728   ID:2    MQTT - remaining_length_bytes 1
+00:34.728   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:34.728   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:34.728   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:34.728   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:34.728   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:34.728   ID:2    MQTT - (write_bytes) len: 58 write_pos: 58
+00:34.728   ID:2    MQTT - (send_out_buffer) Space used in buffer: 87
+00:34.728   ID:2    MQTT - Publish Enqueued
+00:34.729   ID:2    #L 1 0; red
+00:34.729   ID:2    #L 1 1; red
+00:34.735   ID:1    `?[EjN'P`?[E1^Pn`4?[N&P^!0Uiot-2/evt/status/fmt/json{"d#L 3 0; red
+00:34.735   ID:1    #L 2 1; red
+00:34.741   ID:2    MQTT - Got TCP_DATA_SENT
+00:34.741   ID:2    #L 1 0; red
+00:34.741   ID:2    #L 1 1; red
+00:34.803   ID:1    `4?[n&P"":{"id":"r","seq":"8","type":"ci#L 2 0; red
+00:34.803   ID:1    #L 2 1; red
+00:34.808   ID:2    MQTT - Got TCP_DATA_SENT
+00:34.808   ID:2    #L 1 0; red
+00:34.808   ID:2    #L 1 1; red
+00:34.846   ID:1    `+?[&Ptofono-2","uptime":34}}#L 2 0; red
+00:34.846   ID:1    #L 2 1; red
+00:34.850   ID:2    MQTT - Got TCP_DATA_SENT
+00:34.851   ID:1    #L 2 0; red
+00:34.851   ID:1    #L 4 1; red
+00:34.865   ID:4    tcp_input with 87 bytes of data:
+00:34.865   ID:4    MQTT - Read VHDR '30'
+00:34.865   ID:4    MQTT - Read Remaining Length byte
+00:34.865   ID:4    MQTT - Finished reading remaining length byte
+00:34.865   ID:4    MQTT - Read PUBLISH topic len 25
+00:34.865   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:34.865   ID:4    MQTT - Copied bytes:
+00:34.865   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 72 22 2C 22 73 65 71 22 3A 22 38 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 34 7D 7D
+00:34.865   ID:4
+00:34.865   ID:4    MQTT - Finished reading packet!
+00:34.865   ID:4    MQTT - total data was 86 bytes of data.
+00:34.865   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:34.865   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:34.865   ID:4    MQTT - This chunk is 58 bytes
+00:34.865   ID:4    APP - Application received a msg from a subscription
+00:34.865   ID:4    APP [mote] - Received MQTT message from the interphone
+00:34.865   ID:4    APP [mote] - Received interphone call
+00:34.865   ID:4    MQTT - (handle_publish) resetting packet.
+00:34.865   ID:4    #L 1 0; red
+00:34.865   ID:4    #L 1 1; red
+00:34.865   ID:4    APP [mote] - Ringing
+00:34.865   ID:4    APP [mote] - RINGING state
+00:34.865   ID:4    APP [mote] - Ringing
+00:34.865   ID:4    APP [mote] - RINGING state
+00:34.867   ID:1    #L 4 0; red
+00:34.867   ID:1    #L 3 1; red
+00:34.895   ID:3    tcp_input with 87 bytes of data:
+00:34.895   ID:3    MQTT - Read VHDR '30'
+00:34.895   ID:3    MQTT - Read Remaining Length byte
+00:34.895   ID:3    MQTT - Finished reading remaining length byte
+00:34.895   ID:3    MQTT - Read PUBLISH topic len 25
+00:34.895   ID:3    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:34.895   ID:3    MQTT - Copied bytes:
+00:34.895   ID:3    7B 22 64 22 3A 7B 22 69 64 22 3A 22 72 22 2C 22 73 65 71 22 3A 22 38 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 34 7D 7D
+00:34.895   ID:3
+00:34.895   ID:3    MQTT - Finished reading packet!
+00:34.895   ID:3    MQTT - total data was 86 bytes of data.
+00:34.895   ID:3    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:34.895   ID:3    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:34.895   ID:3    MQTT - This chunk is 58 bytes
+00:34.895   ID:3    APP - Application received a msg from a subscription
+00:34.895   ID:3    APP [mote] - Received MQTT message from the interphone
+00:34.895   ID:3    APP [mote] - Received interphone call
+00:34.895   ID:3    MQTT - (handle_publish) resetting packet.
+00:34.895   ID:3    #L 1 0; red
+00:34.895   ID:3    #L 1 1; red
+00:34.895   ID:3    APP [mote] - Ringing
+00:34.895   ID:3    APP [mote] - RINGING state
+00:34.895   ID:3    APP [mote] - Ringing
+00:34.895   ID:3    APP [mote] - RINGING state
+00:35.236   ID:2    APP [citofono] - Sending MQTT message: RINGING
+00:35.236   ID:2    APP [citofono] - STATE Publishing
+00:35.236   ID:2    MQTT - Call to mqtt_publish...
+00:35.236   ID:2    MQTT - Accepted!
+00:35.236   ID:2    APP - Publish!
+00:35.236   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:35.236   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:35.236   ID:2    MQTT - Buffer space is 512
+00:35.236   ID:2    MQTT - Encoding length 85
+00:35.236   ID:2    MQTT - Encode len digit '85' length '0'
+00:35.236   ID:2    MQTT - remaining_length_bytes 1
+00:35.236   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:35.236   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:35.236   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:35.236   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:35.236   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:35.236   ID:2    MQTT - (write_bytes) len: 58 write_pos: 58
+00:35.236   ID:2    MQTT - (send_out_buffer) Space used in buffer: 87
+00:35.236   ID:2    MQTT - Publish Enqueued
+00:35.237   ID:2    #L 1 0; red
+00:35.237   ID:2    #L 1 1; red
+00:35.243   ID:1    `?[EjN~P`?[E1^Pn`4?[&P]0Uiot-2/evt/status/fmt/json{"d#L 3 0; red
+00:35.243   ID:1    #L 2 1; red
+00:35.249   ID:2    MQTT - Got TCP_DATA_SENT
+00:35.249   ID:2    #L 1 0; red
+00:35.249   ID:2    #L 1 1; red
+00:35.292   ID:1    `4?[&P":{"id":"r","seq":"9","type":"ci#L 2 0; red
+00:35.292   ID:1    #L 2 1; red
+00:35.297   ID:2    MQTT - Got TCP_DATA_SENT
+00:35.297   ID:2    #L 1 0; red
+00:35.297   ID:2    #L 1 1; red
+00:35.337   ID:1    `+?[&Ptofono-2","uptime":35}}#L 2 0; red
+00:35.337   ID:1    #L 2 1; red
+00:35.341   ID:2    MQTT - Got TCP_DATA_SENT
+00:35.342   ID:1    #L 2 0; red
+00:35.342   ID:1    #L 4 1; red
+00:35.356   ID:4    tcp_input with 87 bytes of data:
+00:35.356   ID:4    MQTT - Read VHDR '30'
+00:35.356   ID:4    MQTT - Read Remaining Length byte
+00:35.356   ID:4    MQTT - Finished reading remaining length byte
+00:35.356   ID:4    MQTT - Read PUBLISH topic len 25
+00:35.356   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:35.356   ID:4    MQTT - Copied bytes:
+00:35.356   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 72 22 2C 22 73 65 71 22 3A 22 39 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 35 7D 7D
+00:35.356   ID:4
+00:35.356   ID:4    MQTT - Finished reading packet!
+00:35.356   ID:4    MQTT - total data was 86 bytes of data.
+00:35.356   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:35.356   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:35.356   ID:4    MQTT - This chunk is 58 bytes
+00:35.356   ID:4    APP - Application received a msg from a subscription
+00:35.356   ID:4    APP [mote] - Received MQTT message from the interphone
+00:35.356   ID:4    APP [mote] - Received interphone call
+00:35.356   ID:4    MQTT - (handle_publish) resetting packet.
+00:35.356   ID:4    #L 1 0; red
+00:35.356   ID:4    #L 1 1; red
+00:35.356   ID:4    APP [mote] - Ringing
+00:35.356   ID:4    APP [mote] - RINGING state
+00:35.356   ID:4    APP [mote] - Ringing
+00:35.356   ID:4    APP [mote] - RINGING state
+00:35.358   ID:1    #L 4 0; red
+00:35.358   ID:1    #L 3 1; red
+00:35.383   ID:3    tcp_input with 87 bytes of data:
+00:35.383   ID:3    MQTT - Read VHDR '30'
+00:35.383   ID:3    MQTT - Read Remaining Length byte
+00:35.383   ID:3    MQTT - Finished reading remaining length byte
+00:35.383   ID:3    MQTT - Read PUBLISH topic len 25
+00:35.383   ID:3    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 58 payload bytes
+00:35.383   ID:3    MQTT - Copied bytes:
+00:35.383   ID:3    7B 22 64 22 3A 7B 22 69 64 22 3A 22 72 22 2C 22 73 65 71 22 3A 22 39 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 35 7D 7D
+00:35.383   ID:3
+00:35.383   ID:3    MQTT - Finished reading packet!
+00:35.383   ID:3    MQTT - total data was 86 bytes of data.
+00:35.383   ID:3    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:35.383   ID:3    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:35.383   ID:3    MQTT - This chunk is 58 bytes
+00:35.383   ID:3    APP - Application received a msg from a subscription
+00:35.383   ID:3    APP [mote] - Received MQTT message from the interphone
+00:35.383   ID:3    APP [mote] - Received interphone call
+00:35.383   ID:3    MQTT - (handle_publish) resetting packet.
+00:35.383   ID:3    #L 1 0; red
+00:35.383   ID:3    #L 1 1; red
+00:35.383   ID:3    APP [mote] - Ringing
+00:35.383   ID:3    APP [mote] - RINGING state
+00:35.383   ID:3    APP [mote] - Ringing
+00:35.383   ID:3    APP [mote] - RINGING state
+00:36.728   ID:2    APP [citofono] - Received a call on the interphone
+00:36.728   ID:2    APP [citofono] - STATE Publishing
+00:36.728   ID:2    MQTT - Call to mqtt_publish...
+00:36.728   ID:2    MQTT - Accepted!
+00:36.728   ID:2    APP - Publish!
+00:36.728   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:36.728   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:36.728   ID:2    MQTT - Buffer space is 512
+00:36.728   ID:2    MQTT - Encoding length 86
+00:36.728   ID:2    MQTT - Encode len digit '86' length '0'
+00:36.728   ID:2    MQTT - remaining_length_bytes 1
+00:36.728   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:36.728   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:36.728   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:36.728   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:36.728   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:36.728   ID:2    MQTT - (write_bytes) len: 59 write_pos: 59
+00:36.728   ID:2    MQTT - (send_out_buffer) Space used in buffer: 88
+00:36.728   ID:2    MQTT - Publish Enqueued
+00:36.729   ID:2    #L 1 0; red
+00:36.729   ID:2    #L 1 1; red
+00:36.735   ID:1    `?[EjNPi`?[E1^4PnE`4?[&P]r0Viot-2/evt/status/fmt/json{"d#L 3 0; red
+00:36.735   ID:1    #L 2 1; red
+00:36.741   ID:2    MQTT - Got TCP_DATA_SENT
+00:36.741   ID:2    #L 1 0; red
+00:36.741   ID:2    #L 1 1; red
+00:36.804   ID:1    `4?[&Py":{"id":"r","seq":"10","type":"c#L 2 0; red
+00:36.804   ID:1    #L 2 1; red
+00:36.809   ID:2    MQTT - Got TCP_DATA_SENT
+00:36.809   ID:2    #L 1 0; red
+00:36.809   ID:2    #L 1 1; red
+00:36.852   ID:1    `,?[<&PR#itofono-2","uptime":36}}#L 2 0; red
+00:36.852   ID:1    #L 2 1; red
+00:36.856   ID:2    MQTT - Got TCP_DATA_SENT
+00:36.857   ID:1    #L 2 0; red
+00:36.857   ID:1    #L 4 1; red
+00:36.871   ID:4    tcp_input with 88 bytes of data:
+00:36.871   ID:4    MQTT - Read VHDR '30'
+00:36.871   ID:4    MQTT - Read Remaining Length byte
+00:36.871   ID:4    MQTT - Finished reading remaining length byte
+00:36.871   ID:4    MQTT - Read PUBLISH topic len 25
+00:36.871   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 59 payload bytes
+00:36.871   ID:4    MQTT - Copied bytes:
+00:36.871   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 72 22 2C 22 73 65 71 22 3A 22 31 30 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 36 7D 7D
+00:36.871   ID:4
+00:36.871   ID:4    MQTT - Finished reading packet!
+00:36.871   ID:4    MQTT - total data was 87 bytes of data.
+00:36.871   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:36.871   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:36.871   ID:4    MQTT - This chunk is 59 bytes
+00:36.871   ID:4    APP - Application received a msg from a subscription
+00:36.871   ID:4    APP [mote] - Received MQTT message from the interphone
+00:36.871   ID:4    APP [mote] - Received interphone call
+00:36.871   ID:4    MQTT - (handle_publish) resetting packet.
+00:36.871   ID:4    #L 1 0; red
+00:36.871   ID:4    #L 1 1; red
+00:36.871   ID:4    APP [mote] - Ringing
+00:36.871   ID:4    APP [mote] - RINGING state
+00:36.871   ID:4    APP [mote] - Ringing
+00:36.871   ID:4    APP [mote] - RINGING state
+00:36.873   ID:1    #L 4 0; red
+00:36.873   ID:1    #L 3 1; red
+00:36.897   ID:3    tcp_input with 88 bytes of data:
+00:36.897   ID:3    MQTT - Read VHDR '30'
+00:36.897   ID:3    MQTT - Read Remaining Length byte
+00:36.897   ID:3    MQTT - Finished reading remaining length byte
+00:36.897   ID:3    MQTT - Read PUBLISH topic len 25
+00:36.897   ID:3    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 59 payload bytes
+00:36.897   ID:3    MQTT - Copied bytes:
+00:36.897   ID:3    7B 22 64 22 3A 7B 22 69 64 22 3A 22 72 22 2C 22 73 65 71 22 3A 22 31 30 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 36 7D 7D
+00:36.897   ID:3
+00:36.897   ID:3    MQTT - Finished reading packet!
+00:36.897   ID:3    MQTT - total data was 87 bytes of data.
+00:36.897   ID:3    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:36.897   ID:3    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:36.897   ID:3    MQTT - This chunk is 59 bytes
+00:36.897   ID:3    APP - Application received a msg from a subscription
+00:36.897   ID:3    APP [mote] - Received MQTT message from the interphone
+00:36.897   ID:3    APP [mote] - Received interphone call
+00:36.897   ID:3    MQTT - (handle_publish) resetting packet.
+00:36.897   ID:3    #L 1 0; red
+00:36.897   ID:3    #L 1 1; red
+00:36.897   ID:3    APP [mote] - Ringing
+00:36.897   ID:3    APP [mote] - RINGING state
+00:36.897   ID:3    APP [mote] - Ringing
+00:36.897   ID:3    APP [mote] - RINGING state
+00:37.604   ID:4    APP [mote] - Ringing
+00:37.604   ID:4    APP [mote] - RINGING state
+00:37.604   ID:4    APP [mote] - Sending OPEN message
+00:37.604   ID:4    APP [mote] - STATE Publishing
+00:37.604   ID:4    MQTT - Call to mqtt_publish...
+00:37.604   ID:4    MQTT - Accepted!
+00:37.604   ID:4    APP - Publish!
+00:37.604   ID:4    MQTT - Got mqtt_do_publish_mqtt_event!
+00:37.604   ID:4    MQTT - Sending publish message! topic iot-2/cmd/mote/fmt/json topic_length 23
+00:37.604   ID:4    MQTT - Buffer space is 512
+00:37.604   ID:4    MQTT - Encoding length 79
+00:37.604   ID:4    MQTT - Encode len digit '79' length '0'
+00:37.604   ID:4    MQTT - remaining_length_bytes 1
+00:37.604   ID:4    MQTT - (write_byte) buff_size: 512 write: '30'
+00:37.604   ID:4    MQTT - (write_bytes) len: 1 write_pos: 1
+00:37.604   ID:4    MQTT - (write_byte) buff_size: 510 write: '00'
+00:37.604   ID:4    MQTT - (write_byte) buff_size: 509 write: '17'
+00:37.604   ID:4    MQTT - (write_bytes) len: 23 write_pos: 23
+00:37.604   ID:4    MQTT - (write_bytes) len: 54 write_pos: 54
+00:37.604   ID:4    MQTT - (send_out_buffer) Space used in buffer: 81
+00:37.604   ID:4    MQTT - Publish Enqueued
+00:37.605   ID:4    #L 1 0; red
+00:37.605   ID:4    #L 1 1; red
+00:37.605   ID:4    APP [mote] - IDLE state
+00:37.670   ID:1    `?[EjO-P`?[E1^Pm`4?[EjO-Pw0Oiot-2/cmd/mote/fmt/json{"d":#L 3 0; red
+00:37.670   ID:1    #L 4 1; red
+00:37.675   ID:4    MQTT - Got TCP_DATA_SENT
+00:37.675   ID:4    #L 1 0; red
+00:37.675   ID:4    #L 1 1; red
+00:37.682   ID:1    `4?[ejO-P5{"id":"o","seq":"1","type":"mote#L 4 0; red
+00:37.682   ID:1    #L 4 1; red
+00:37.688   ID:4    MQTT - Got TCP_DATA_SENT
+00:37.688   ID:4    #L 1 0; red
+00:37.688   ID:4    #L 1 1; red
+00:37.744   ID:1    `%?[jO-P--4","uptime":37}}#L 4 0; red
+00:37.744   ID:1    #L 4 1; red
+00:37.748   ID:4    MQTT - Got TCP_DATA_SENT
+00:37.749   ID:1    #L 4 0; red
+00:37.749   ID:1    #L 2 1; red
+00:37.763   ID:2    tcp_input with 81 bytes of data:
+00:37.763   ID:2    MQTT - Read VHDR '30'
+00:37.763   ID:2    MQTT - Read Remaining Length byte
+00:37.763   ID:2    MQTT - Finished reading remaining length byte
+00:37.763   ID:2    MQTT - Read PUBLISH topic len 23
+00:37.763   ID:2    MQTT - topic_pos: 0 copy_bytes: 23MQTT - Got topic 'iot-2/cmd/mote/fmt/json'- Copied 54 payload bytes
+00:37.763   ID:2    MQTT - Copied bytes:
+00:37.763   ID:2    7B 22 64 22 3A 7B 22 69 64 22 3A 22 6F 22 2C 22 73 65 71 22 3A 22 31 22 2C 22 74 79 70 65 22 3A 22 6D 6F 74 65 2D 34 22 2C 22 75 70 74 69 6D 65 22 3A 33 37 7D 7D
+00:37.763   ID:2
+00:37.763   ID:2    MQTT - Finished reading packet!
+00:37.763   ID:2    MQTT - total data was 80 bytes of data.
+00:37.763   ID:2    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:37.763   ID:2    MQTT - Handling publish on topic 'iot-2/cmd/mote/fmt/json'
+00:37.763   ID:2    MQTT - This chunk is 54 bytes
+00:37.763   ID:2    APP - Application received a msg from a subscription
+00:37.763   ID:2    APP [citofono] - MQTT message receivedAPP [citofono] - OPEN command received
+00:37.763   ID:2    MQTT - (handle_publish) resetting packet.
+00:37.763   ID:2    #L 1 0; red
+00:37.763   ID:2    #L 1 1; red
+00:37.763   ID:2    APP [citofono] - Openig Gate
+00:37.763   ID:2    APP [citofono] - STATE Publishing
+00:37.763   ID:2    MQTT - Call to mqtt_publish...
+00:37.763   ID:2    MQTT - Accepted!
+00:37.763   ID:2    APP - Publish!
+00:37.771   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:37.771   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:37.771   ID:2    MQTT - Buffer space is 512
+00:37.771   ID:2    MQTT - Encoding length 86
+00:37.771   ID:2    MQTT - Encode len digit '86' length '0'
+00:37.771   ID:2    MQTT - remaining_length_bytes 1
+00:37.771   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:37.771   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:37.771   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:37.771   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:37.771   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:37.771   ID:2    MQTT - (write_bytes) len: 59 write_pos: 59
+00:37.771   ID:2    MQTT - (send_out_buffer) Space used in buffer: 88
+00:37.771   ID:2    MQTT - Publish Enqueued
+00:37.771   ID:2    #L 1 0; red
+00:37.771   ID:2    #L 1 1; red
+00:37.779   ID:1    `?[T''P`4?[T''P\0Viot-2/evt/status/fmt/json{"d#L 2 0; red
+00:37.779   ID:1    #L 2 1; red
+00:37.784   ID:2    MQTT - Got TCP_DATA_SENT
+00:37.784   ID:2    #L 1 0; red
+00:37.784   ID:2    #L 1 1; red
+00:37.842   ID:1    `4?[t''P":{"id":"o","seq":"11","type":"c#L 2 0; red
+00:37.842   ID:1    #L 2 1; red
+00:37.847   ID:2    MQTT - Got TCP_DATA_SENT
+00:37.847   ID:2    #L 1 0; red
+00:37.847   ID:2    #L 1 1; red
+00:37.878   ID:1    `,?[''PQyitofono-2","uptime":37}}#L 2 0; red
+00:37.878   ID:1    #L 2 1; red
+00:37.882   ID:2    MQTT - Got TCP_DATA_SENT
+00:37.883   ID:1    #L 2 0; red
+00:37.883   ID:1    #L 4 1; red
+00:37.897   ID:4    tcp_input with 88 bytes of data:
+00:37.897   ID:4    MQTT - Read VHDR '30'
+00:37.897   ID:4    MQTT - Read Remaining Length byte
+00:37.897   ID:4    MQTT - Finished reading remaining length byte
+00:37.897   ID:4    MQTT - Read PUBLISH topic len 25
+00:37.897   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 59 payload bytes
+00:37.897   ID:4    MQTT - Copied bytes:
+00:37.897   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 6F 22 2C 22 73 65 71 22 3A 22 31 31 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 37 7D 7D
+00:37.897   ID:4
+00:37.897   ID:4    MQTT - Finished reading packet!
+00:37.897   ID:4    MQTT - total data was 87 bytes of data.
+00:37.897   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:37.897   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:37.897   ID:4    MQTT - This chunk is 59 bytes
+00:37.897   ID:4    APP - Application received a msg from a subscription
+00:37.897   ID:4    APP [mote] - Received MQTT message from the interphone
+00:37.897   ID:4    APP [mote] - Gate is opening
+00:37.897   ID:4    MQTT - (handle_publish) resetting packet.
+00:37.897   ID:4    #L 1 0; red
+00:37.897   ID:4    #L 1 1; red
+00:37.897   ID:4    APP [mote] - IDLE state
+00:37.897   ID:4    APP [mote] - IDLE state
+00:37.899   ID:1    #L 4 0; red
+00:37.899   ID:1    #L 3 1; red
+00:37.919   ID:3    tcp_input with 88 bytes of data:
+00:37.919   ID:3    MQTT - Read VHDR '30'
+00:37.919   ID:3    MQTT - Read Remaining Length byte
+00:37.919   ID:3    MQTT - Finished reading remaining length byte
+00:37.919   ID:3    MQTT - Read PUBLISH topic len 25
+00:37.919   ID:3    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 59 payload bytes
+00:37.919   ID:3    MQTT - Copied bytes:
+00:37.919   ID:3    7B 22 64 22 3A 7B 22 69 64 22 3A 22 6F 22 2C 22 73 65 71 22 3A 22 31 31 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 37 7D 7D
+00:37.919   ID:3
+00:37.919   ID:3    MQTT - Finished reading packet!
+00:37.919   ID:3    MQTT - total data was 87 bytes of data.
+00:37.919   ID:3    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:37.919   ID:3    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:37.919   ID:3    MQTT - This chunk is 59 bytes
+00:37.919   ID:3    APP - Application received a msg from a subscription
+00:37.919   ID:3    APP [mote] - Received MQTT message from the interphone
+00:37.919   ID:3    APP [mote] - Gate is opening
+00:37.919   ID:3    MQTT - (handle_publish) resetting packet.
+00:37.919   ID:3    #L 1 0; red
+00:37.919   ID:3    #L 1 1; red
+00:37.919   ID:3    APP [mote] - IDLE state
+00:37.919   ID:3    APP [mote] - IDLE state
+00:39.763   ID:2    APP [citofono] - GATE OPEN
+00:39.763   ID:2    APP [citofono] - STATE Publishing
+00:39.763   ID:2    MQTT - Call to mqtt_publish...
+00:39.763   ID:2    MQTT - Accepted!
+00:39.763   ID:2    APP - Publish!
+00:39.763   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:39.763   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:39.763   ID:2    MQTT - Buffer space is 512
+00:39.763   ID:2    MQTT - Encoding length 86
+00:39.763   ID:2    MQTT - Encode len digit '86' length '0'
+00:39.763   ID:2    MQTT - remaining_length_bytes 1
+00:39.763   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:39.763   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:39.763   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:39.763   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:39.763   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:39.763   ID:2    MQTT - (write_bytes) len: 59 write_pos: 59
+00:39.763   ID:2    MQTT - (send_out_buffer) Space used in buffer: 88
+00:39.763   ID:2    MQTT - Publish Enqueued
+00:39.764   ID:2    #L 1 0; red
+00:39.764   ID:2    #L 1 1; red
+00:39.770   ID:1    `?[jOPh`?[E1^Pm`4?[''P\q0Viot-2/evt/status/fmt/json{"d#L 3 0; red
+00:39.770   ID:1    #L 2 1; red
+00:39.776   ID:2    MQTT - Got TCP_DATA_SENT
+00:39.776   ID:2    #L 1 0; red
+00:39.776   ID:2    #L 1 1; red
+00:39.823   ID:1    `4?[''Pq":{"id":"y","seq":"12","type":"c#L 2 0; red
+00:39.823   ID:1    #L 2 1; red
+00:39.828   ID:2    MQTT - Got TCP_DATA_SENT
+00:39.828   ID:2    #L 1 0; red
+00:39.828   ID:2    #L 1 1; red
+00:39.868   ID:1    `,?[''PQitofono-2","uptime":39}}#L 2 0; red
+00:39.868   ID:1    #L 2 1; red
+00:39.872   ID:2    MQTT - Got TCP_DATA_SENT
+00:39.873   ID:1    #L 2 0; red
+00:39.873   ID:1    #L 4 1; red
+00:39.887   ID:4    tcp_input with 88 bytes of data:
+00:39.887   ID:4    MQTT - Read VHDR '30'
+00:39.887   ID:4    MQTT - Read Remaining Length byte
+00:39.887   ID:4    MQTT - Finished reading remaining length byte
+00:39.887   ID:4    MQTT - Read PUBLISH topic len 25
+00:39.887   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 59 payload bytes
+00:39.887   ID:4    MQTT - Copied bytes:
+00:39.887   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 79 22 2C 22 73 65 71 22 3A 22 31 32 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 39 7D 7D
+00:39.887   ID:4
+00:39.887   ID:4    MQTT - Finished reading packet!
+00:39.887   ID:4    MQTT - total data was 87 bytes of data.
+00:39.887   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:39.887   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:39.887   ID:4    MQTT - This chunk is 59 bytes
+00:39.887   ID:4    APP - Application received a msg from a subscription
+00:39.887   ID:4    APP [mote] - Received MQTT message from the interphone
+00:39.887   ID:4    APP [mote] - Gate is opened
+00:39.887   ID:4    MQTT - (handle_publish) resetting packet.
+00:39.887   ID:4    #L 1 0; red
+00:39.887   ID:4    #L 1 1; red
+00:39.887   ID:4    APP [mote] - IDLE state
+00:39.887   ID:4    APP [mote] - IDLE state
+00:39.889   ID:1    #L 4 0; red
+00:39.889   ID:1    #L 3 1; red
+00:39.913   ID:3    tcp_input with 88 bytes of data:
+00:39.913   ID:3    MQTT - Read VHDR '30'
+00:39.913   ID:3    MQTT - Read Remaining Length byte
+00:39.913   ID:3    MQTT - Finished reading remaining length byte
+00:39.913   ID:3    MQTT - Read PUBLISH topic len 25
+00:39.913   ID:3    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 59 payload bytes
+00:39.913   ID:3    MQTT - Copied bytes:
+00:39.913   ID:3    7B 22 64 22 3A 7B 22 69 64 22 3A 22 79 22 2C 22 73 65 71 22 3A 22 31 32 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 33 39 7D 7D
+00:39.913   ID:3
+00:39.913   ID:3    MQTT - Finished reading packet!
+00:39.913   ID:3    MQTT - total data was 87 bytes of data.
+00:39.913   ID:3    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:39.913   ID:3    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:39.913   ID:3    MQTT - This chunk is 59 bytes
+00:39.913   ID:3    APP - Application received a msg from a subscription
+00:39.913   ID:3    APP [mote] - Received MQTT message from the interphone
+00:39.913   ID:3    APP [mote] - Gate is opened
+00:39.913   ID:3    MQTT - (handle_publish) resetting packet.
+00:39.913   ID:3    #L 1 0; red
+00:39.913   ID:3    #L 1 1; red
+00:39.913   ID:3    APP [mote] - IDLE state
+00:39.913   ID:3    APP [mote] - IDLE state
+00:40.236   ID:2    APP [citofono] - Sending MQTT message: IDLE
+00:40.236   ID:2    APP [citofono] - STATE Publishing
+00:40.236   ID:2    MQTT - Call to mqtt_publish...
+00:40.236   ID:2    MQTT - Accepted!
+00:40.236   ID:2    APP - Publish!
+00:40.236   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:40.236   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:40.236   ID:2    MQTT - Buffer space is 512
+00:40.236   ID:2    MQTT - Encoding length 86
+00:40.236   ID:2    MQTT - Encode len digit '86' length '0'
+00:40.236   ID:2    MQTT - remaining_length_bytes 1
+00:40.236   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:40.236   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:40.236   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:40.236   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:40.236   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:40.236   ID:2    MQTT - (write_bytes) len: 59 write_pos: 59
+00:40.236   ID:2    MQTT - (send_out_buffer) Space used in buffer: 88
+00:40.236   ID:2    MQTT - Publish Enqueued
+00:40.237   ID:2    #L 1 0; red
+00:40.237   ID:2    #L 1 1; red
+00:40.246   ID:1    `?[jOP`?[E1^<Pm=`4?[''P\0Viot-2/evt/status/fmt/json{"d#L 3 0; red
+00:40.246   ID:1    #L 2 1; red
+00:40.251   ID:2    MQTT - Got TCP_DATA_SENT
+00:40.251   ID:2    #L 1 0; red
+00:40.251   ID:2    #L 1 1; red
+00:40.303   ID:1    `4?[$''P)":{"id":"i","seq":"13","type":"c#L 2 0; red
+00:40.303   ID:1    #L 2 1; red
+00:40.308   ID:2    MQTT - Got TCP_DATA_SENT
+00:40.308   ID:2    #L 1 0; red
+00:40.308   ID:2    #L 1 1; red
+00:40.346   ID:1    `,?[D''POitofono-2","uptime":40}}#L 2 0; red
+00:40.346   ID:1    #L 2 1; red
+00:40.350   ID:2    MQTT - Got TCP_DATA_SENT
+00:40.351   ID:1    #L 2 0; red
+00:40.351   ID:1    #L 4 1; red
+00:40.365   ID:4    tcp_input with 88 bytes of data:
+00:40.365   ID:4    MQTT - Read VHDR '30'
+00:40.365   ID:4    MQTT - Read Remaining Length byte
+00:40.365   ID:4    MQTT - Finished reading remaining length byte
+00:40.365   ID:4    MQTT - Read PUBLISH topic len 25
+00:40.365   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 59 payload bytes
+00:40.365   ID:4    MQTT - Copied bytes:
+00:40.365   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 31 33 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 34 30 7D 7D
+00:40.365   ID:4
+00:40.365   ID:4    MQTT - Finished reading packet!
+00:40.365   ID:4    MQTT - total data was 87 bytes of data.
+00:40.365   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:40.365   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:40.365   ID:4    MQTT - This chunk is 59 bytes
+00:40.365   ID:4    APP - Application received a msg from a subscription
+00:40.365   ID:4    APP [mote] - Received MQTT message from the interphone
+00:40.365   ID:4    APP [mote] - Received IDLE
+00:40.365   ID:4    MQTT - (handle_publish) resetting packet.
+00:40.365   ID:4    #L 1 0; red
+00:40.365   ID:4    #L 1 1; red
+00:40.365   ID:4    APP [mote] - IDLE state
+00:40.365   ID:4    APP [mote] - IDLE state
+00:40.367   ID:1    #L 4 0; red
+00:40.367   ID:1    #L 3 1; red
+00:40.386   ID:3    tcp_input with 88 bytes of data:
+00:40.386   ID:3    MQTT - Read VHDR '30'
+00:40.386   ID:3    MQTT - Read Remaining Length byte
+00:40.386   ID:3    MQTT - Finished reading remaining length byte
+00:40.386   ID:3    MQTT - Read PUBLISH topic len 25
+00:40.386   ID:3    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 59 payload bytes
+00:40.386   ID:3    MQTT - Copied bytes:
+00:40.386   ID:3    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 31 33 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 34 30 7D 7D
+00:40.386   ID:3
+00:40.386   ID:3    MQTT - Finished reading packet!
+00:40.386   ID:3    MQTT - total data was 87 bytes of data.
+00:40.386   ID:3    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:40.386   ID:3    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:40.386   ID:3    MQTT - This chunk is 59 bytes
+00:40.386   ID:3    APP - Application received a msg from a subscription
+00:40.386   ID:3    APP [mote] - Received MQTT message from the interphone
+00:40.386   ID:3    APP [mote] - Received IDLE
+00:40.386   ID:3    MQTT - (handle_publish) resetting packet.
+00:40.386   ID:3    #L 1 0; red
+00:40.386   ID:3    #L 1 1; red
+00:40.386   ID:3    APP [mote] - IDLE state
+00:40.386   ID:3    APP [mote] - IDLE state
+00:45.236   ID:2    APP [citofono] - Sending MQTT message: IDLE
+00:45.236   ID:2    APP [citofono] - STATE Publishing
+00:45.236   ID:2    MQTT - Call to mqtt_publish...
+00:45.236   ID:2    MQTT - Accepted!
+00:45.236   ID:2    APP - Publish!
+00:45.236   ID:2    MQTT - Got mqtt_do_publish_mqtt_event!
+00:45.236   ID:2    MQTT - Sending publish message! topic iot-2/evt/status/fmt/json topic_length 25
+00:45.236   ID:2    MQTT - Buffer space is 512
+00:45.236   ID:2    MQTT - Encoding length 86
+00:45.236   ID:2    MQTT - Encode len digit '86' length '0'
+00:45.236   ID:2    MQTT - remaining_length_bytes 1
+00:45.236   ID:2    MQTT - (write_byte) buff_size: 512 write: '30'
+00:45.236   ID:2    MQTT - (write_bytes) len: 1 write_pos: 1
+00:45.236   ID:2    MQTT - (write_byte) buff_size: 510 write: '00'
+00:45.236   ID:2    MQTT - (write_byte) buff_size: 509 write: '19'
+00:45.236   ID:2    MQTT - (write_bytes) len: 25 write_pos: 25
+00:45.236   ID:2    MQTT - (write_bytes) len: 59 write_pos: 59
+00:45.236   ID:2    MQTT - (send_out_buffer) Space used in buffer: 88
+00:45.236   ID:2    MQTT - Publish Enqueued
+00:45.237   ID:2    #L 1 0; red
+00:45.237   ID:2    #L 1 1; red
+00:45.243   ID:1    `?[jP5P`?[E1^Pl`4?[\''P[0Viot-2/evt/status/fmt/json{"d#L 3 0; red
+00:45.243   ID:1    #L 2 1; red
+00:45.249   ID:2    MQTT - Got TCP_DATA_SENT
+00:45.249   ID:2    #L 1 0; red
+00:45.249   ID:2    #L 1 1; red
+00:45.303   ID:1    `4?[|''P":{"id":"i","seq":"14","type":"c#L 2 0; red
+00:45.303   ID:1    #L 2 1; red
+00:45.308   ID:2    MQTT - Got TCP_DATA_SENT
+00:45.308   ID:2    #L 1 0; red
+00:45.308   ID:2    #L 1 1; red
+00:45.346   ID:1    `,?[''POsitofono-2","uptime":45}}#L 2 0; red
+00:45.346   ID:1    #L 2 1; red
+00:45.350   ID:2    MQTT - Got TCP_DATA_SENT
+00:45.351   ID:1    #L 2 0; red
+00:45.351   ID:1    #L 4 1; red
+00:45.365   ID:4    tcp_input with 88 bytes of data:
+00:45.365   ID:4    MQTT - Read VHDR '30'
+00:45.365   ID:4    MQTT - Read Remaining Length byte
+00:45.365   ID:4    MQTT - Finished reading remaining length byte
+00:45.365   ID:4    MQTT - Read PUBLISH topic len 25
+00:45.365   ID:4    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 59 payload bytes
+00:45.365   ID:4    MQTT - Copied bytes:
+00:45.365   ID:4    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 31 34 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 34 35 7D 7D
+00:45.365   ID:4
+00:45.365   ID:4    MQTT - Finished reading packet!
+00:45.365   ID:4    MQTT - total data was 87 bytes of data.
+00:45.365   ID:4    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:45.365   ID:4    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:45.365   ID:4    MQTT - This chunk is 59 bytes
+00:45.365   ID:4    APP - Application received a msg from a subscription
+00:45.365   ID:4    APP [mote] - Received MQTT message from the interphone
+00:45.365   ID:4    APP [mote] - Received IDLE
+00:45.365   ID:4    MQTT - (handle_publish) resetting packet.
+00:45.365   ID:4    #L 1 0; red
+00:45.365   ID:4    #L 1 1; red
+00:45.365   ID:4    APP [mote] - IDLE state
+00:45.365   ID:4    APP [mote] - IDLE state
+00:45.367   ID:1    #L 4 0; red
+00:45.367   ID:1    #L 3 1; red
+00:45.395   ID:3    tcp_input with 88 bytes of data:
+00:45.395   ID:3    MQTT - Read VHDR '30'
+00:45.395   ID:3    MQTT - Read Remaining Length byte
+00:45.395   ID:3    MQTT - Finished reading remaining length byte
+00:45.395   ID:3    MQTT - Read PUBLISH topic len 25
+00:45.395   ID:3    MQTT - topic_pos: 0 copy_bytes: 25MQTT - Got topic 'iot-2/evt/status/fmt/json'- Copied 59 payload bytes
+00:45.395   ID:3    MQTT - Copied bytes:
+00:45.395   ID:3    7B 22 64 22 3A 7B 22 69 64 22 3A 22 69 22 2C 22 73 65 71 22 3A 22 31 34 22 2C 22 74 79 70 65 22 3A 22 63 69 74 6F 66 6F 6E 6F 2D 32 22 2C 22 75 70 74 69 6D 65 22 3A 34 35 7D 7D
+00:45.395   ID:3
+00:45.395   ID:3    MQTT - Finished reading packet!
+00:45.395   ID:3    MQTT - total data was 87 bytes of data.
+00:45.395   ID:3    MQTT - Got PUBLISH, called once per manageable chunk of message.
+00:45.395   ID:3    MQTT - Handling publish on topic 'iot-2/evt/status/fmt/json'
+00:45.395   ID:3    MQTT - This chunk is 59 bytes
+00:45.395   ID:3    APP - Application received a msg from a subscription
+00:45.395   ID:3    APP [mote] - Received MQTT message from the interphone
+00:45.395   ID:3    APP [mote] - Received IDLE
+00:45.395   ID:3    MQTT - (handle_publish) resetting packet.
+00:45.395   ID:3    #L 1 0; red
+00:45.395   ID:3    #L 1 1; red
+00:45.395   ID:3    APP [mote] - IDLE state
+00:45.395   ID:3    APP [mote] - IDLE state

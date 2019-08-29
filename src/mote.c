@@ -60,10 +60,8 @@ inline void stopRinging()
 void pub_handler(const char *topic, uint16_t topic_len, const uint8_t *chunk,
                     uint16_t chunk_len)
 {
-  DBG("APP [mote] -  RCV SEQ: %c%c%c\n",chunk[SEQ_OFFSET_IN_MSG-1],
-                    chunk[SEQ_OFFSET_IN_MSG],chunk[SEQ_OFFSET_IN_MSG+1] );
-  DBG("APP [mote] -  RCV ID: %c%c%c\n",chunk[STATE_OFFSET_IN_MSG-1],
-                    chunk[STATE_OFFSET_IN_MSG],chunk[STATE_OFFSET_IN_MSG+1] );
+
+  DBG("APP [mote] - Received MQTT message from the interphone\n");
 
   // Check messages id
   switch(chunk[STATE_OFFSET_IN_MSG])
@@ -91,7 +89,6 @@ void pub_handler(const char *topic, uint16_t topic_len, const uint8_t *chunk,
   }
 
   process_poll(&mqtt_fsm_process);
-  DBG("APP [mote] - Received message!\n");
 }
 
 
@@ -144,7 +141,7 @@ PROCESS_THREAD(mqtt_fsm_process, ev, data)
 {
   PROCESS_BEGIN();
 
-  printf("APP [mote] - Smart-citofono mote started\n");
+  printf("APP [mote] - Mote started\n");
 
   /* Initialize the mqtt state machine */
   mqtt_fsm_init(BROKER_IP, BROKER_PORT, TYPE_ID, PUB_TOPIC, SUB_TOPIC,
